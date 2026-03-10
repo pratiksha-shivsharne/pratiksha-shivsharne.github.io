@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pratiksha Shivsharne | Portfolio</title>
+<title>Pratiksha Shivsharne Portfolio</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -13,8 +14,8 @@
 <style>
 
 body{
-font-family: Arial, sans-serif;
 margin:0;
+font-family:Arial;
 background:#0f172a;
 color:white;
 }
@@ -23,17 +24,14 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px;
+padding:20px 10%;
 background:#020617;
-position:sticky;
-top:0;
 }
 
 nav a{
 color:white;
-margin:0 15px;
+margin-left:20px;
 text-decoration:none;
-font-weight:500;
 }
 
 .hero{
@@ -42,16 +40,18 @@ align-items:center;
 justify-content:center;
 padding:80px 10%;
 gap:50px;
+flex-wrap:wrap;
 }
 
 .hero img{
-width:220px;
+width:200px;
 border-radius:50%;
 border:4px solid #38bdf8;
 }
 
-.hero-text h1{
+.hero h1{
 font-size:40px;
+margin:0;
 }
 
 #typing{
@@ -61,11 +61,11 @@ font-weight:bold;
 
 .btn{
 display:inline-block;
-padding:12px 20px;
 background:#38bdf8;
 color:black;
-border-radius:6px;
+padding:12px 20px;
 margin-top:20px;
+border-radius:6px;
 text-decoration:none;
 font-weight:bold;
 }
@@ -76,13 +76,13 @@ padding:70px 10%;
 
 .section h2{
 text-align:center;
-margin-bottom:40px;
 font-size:32px;
+margin-bottom:40px;
 }
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
 
@@ -96,24 +96,29 @@ text-align:center;
 .card img{
 width:100%;
 border-radius:8px;
+margin-bottom:15px;
 }
 
 .certificate img{
-height:150px;
+height:180px;
 object-fit:contain;
 background:white;
 padding:10px;
 }
 
-footer{
+.contact{
 text-align:center;
-padding:40px;
-background:#020617;
 }
 
 .contact i{
-margin-right:10px;
 color:#38bdf8;
+margin-right:10px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
 }
 
 </style>
@@ -129,7 +134,7 @@ color:#38bdf8;
 <div>
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
-<a href="#certifications">Certifications</a>
+<a href="#certifications">Certificates</a>
 <a href="#contact">Contact</a>
 </div>
 
@@ -139,16 +144,14 @@ color:#38bdf8;
 
 <img src="profile.jpg">
 
-<div class="hero-text">
+<div>
 
 <h1>Pratiksha Shivsharne</h1>
 
 <h2>I am a <span id="typing"></span></h2>
 
 <p>
-Passionate about data analytics, machine learning and cloud technologies.
-I enjoy transforming raw data into meaningful insights and building
-data-driven solutions.
+Passionate about Data Analytics, Machine Learning and Cloud Technologies.
 </p>
 
 <a href="Pratiksha_Shivsharne_Resume.pdf" download class="btn">
@@ -163,12 +166,10 @@ Download Resume
 
 <h2>About Me</h2>
 
-<p style="text-align:center;max-width:700px;margin:auto;">
-I am a data enthusiast with knowledge of Data Science, Machine Learning
-and Cloud Computing. I have worked on real-world datasets to analyze
-business trends, develop predictive models and build cloud-based
-applications. I aim to use data to drive meaningful insights and
-decision-making.
+<p style="max-width:700px;margin:auto;text-align:center">
+I am a Data Science enthusiast with knowledge of Python, Machine Learning,
+Data Analysis and AWS Cloud. I enjoy analyzing data, building predictive
+models and creating insights that help businesses make data-driven decisions.
 </p>
 
 </section>
@@ -180,30 +181,42 @@ decision-making.
 <div class="cards">
 
 <div class="card">
+
 <img src="aws_cloud_project.png">
+
 <h3>AWS Cloud Architecture</h3>
+
 <p>
-Designed cloud architecture using EC2, S3, IAM and VPC to deploy a
-secure web application environment on AWS.
+Designed cloud architecture using EC2, S3, IAM and VPC to deploy
+a secure web application environment on AWS.
 </p>
+
 </div>
 
 <div class="card">
+
 <img src="diabetes_ml_project.png">
-<h3>Diabetic Detection Model</h3>
+
+<h3>Diabetic Detection ML Model</h3>
+
 <p>
-Built a machine learning model using Pandas and Scikit-learn to predict
-diabetes risk based on patient diagnostic data.
+Built a predictive model using Pandas and Scikit-learn to
+identify diabetes risk from patient diagnostic data.
 </p>
+
 </div>
 
 <div class="card">
+
 <img src="olist_dashboard.png">
-<h3>Olist E-commerce Data Analysis</h3>
+
+<h3>E-commerce Sales Analysis</h3>
+
 <p>
-Performed EDA and created visualizations to identify trends in sales,
-customer behavior and delivery performance.
+Analyzed Olist dataset using Python to identify trends in
+customer behavior, delivery performance and sales insights.
 </p>
+
 </div>
 
 </div>
@@ -217,21 +230,39 @@ customer behavior and delivery performance.
 <div class="cards">
 
 <div class="card certificate">
-<img src="AWS Academy Cloud Foundations.png">
+
+<img src="aws_certificate.png">
+
 <h3>AWS Academy Cloud Foundations</h3>
-<a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" class="btn">View Certificate</a>
+
+<a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" class="btn">
+View Certificate
+</a>
+
 </div>
 
 <div class="card certificate">
-<img src="Advanced Course in Data Science.png">
+
+<img src="datascience_certificate.png">
+
 <h3>Advanced Course in Data Science</h3>
-<a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" class="btn">View Certificate</a>
+
+<a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" class="btn">
+View Certificate
+</a>
+
 </div>
 
 <div class="card certificate">
-<img src="National Level Competition Participated in PROJIT.png">
+
+<img src="projit_certificate.png">
+
 <h3>PROJIT National Level Competition</h3>
-<a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" class="btn">View Certificate</a>
+
+<a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" class="btn">
+View Certificate
+</a>
+
 </div>
 
 </div>
@@ -242,18 +273,21 @@ customer behavior and delivery performance.
 
 <h2>Contact</h2>
 
-<p style="text-align:center">
+<p>
 
 <i class="fa-solid fa-phone"></i>
 Phone: +91 8237642318
+
 <br><br>
 
 <i class="fa-solid fa-envelope"></i>
 Email: pshivsharne@gmail.com
+
 <br><br>
 
 <i class="fa-brands fa-linkedin"></i>
-<a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" style="color:#38bdf8;">
+
+<a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" style="color:#38bdf8">
 LinkedIn Profile
 </a>
 
@@ -263,7 +297,7 @@ LinkedIn Profile
 
 <footer>
 
-<p>© 2026 Pratiksha Shivsharne | Data Portfolio</p>
+<p>© 2026 Pratiksha Shivsharne Portfolio</p>
 
 </footer>
 
@@ -273,8 +307,8 @@ var typed = new Typed("#typing",{
 
 strings:[
 "Data Analyst",
-"Data Science",
-"AI/ML Engineer",
+"Data Scientist",
+"AI / ML Enthusiast",
 "Power BI Specialist",
 "AWS Enthusiast"
 ],
