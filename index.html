@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,20 +99,32 @@ border-radius:8px;
 margin-bottom:15px;
 }
 
-/* SKILLS BUTTON STYLE */
+/* BLUE SKILL BUTTONS */
 
 .skill-btn{
 display:inline-block;
-background:#22c55e;
+background:#38bdf8;
+color:#000;
 padding:10px 18px;
 border-radius:6px;
 margin:6px;
 font-weight:bold;
 }
 
-/* typing style */
+.skill-btn:hover{
+background:#0ea5e9;
+cursor:pointer;
+}
 
-#typing2{
+/* typing styles */
+
+#typing-skills{
+color:#38bdf8;
+font-weight:bold;
+font-size:22px;
+}
+
+#typing-soft{
 color:#38bdf8;
 font-weight:bold;
 font-size:20px;
@@ -168,8 +181,8 @@ Download Resume
 <p style="max-width:700px;margin:auto;text-align:center">
 
 Enthusiastic Data Analyst with hands-on experience in Python, SQL,
-Advanced Excel, Power BI and Tableau. Passionate about turning
-data into insights and building ML models.
+Advanced Excel, Power BI and Tableau.
+Passionate about turning data into insights and building ML models.
 
 </p>
 
@@ -179,7 +192,11 @@ data into insights and building ML models.
 
 <h2>Technical Skills</h2>
 
-<div style="text-align:center">
+<h3 style="text-align:center;margin-bottom:30px;">
+<span id="typing-skills"></span>
+</h3>
+
+<div style="text-align:center;margin-bottom:40px;">
 
 <span class="skill-btn">Data Analytics & ML</span>
 <span class="skill-btn">Visualization & GIS</span>
@@ -190,12 +207,62 @@ data into insights and building ML models.
 
 </div>
 
+<div class="cards">
+
+<div class="card">
+<h3>Data Analytics & ML</h3>
+<p>
+Python (Pandas, NumPy), Scikit-learn, Basic TensorFlow,
+Statistical Analysis, Exploratory Data Analysis (EDA),
+Natural Language Processing (spaCy)
+</p>
+</div>
+
+<div class="card">
+<h3>Visualization & GIS</h3>
+<p>
+Power BI, Tableau, GeoPandas, QGIS, Google Earth Engine
+</p>
+</div>
+
+<div class="card">
+<h3>Databases</h3>
+<p>
+MySQL, SQL
+</p>
+</div>
+
+<div class="card">
+<h3>Excel & Reporting</h3>
+<p>
+Advanced Excel (Pivot Tables, VLOOKUP/XLOOKUP, IF functions,
+Data Cleaning, Charts)
+</p>
+</div>
+
+<div class="card">
+<h3>Cloud & Tools</h3>
+<p>
+AWS (EC2, IAM, S3, RDS, VPC), Git, GitHub,
+Jupyter Notebook, VS Code
+</p>
+</div>
+
+<div class="card">
+<h3>Programming Languages</h3>
+<p>
+Python, C, C++, Java
+</p>
+</div>
+
+</div>
+
 <br><br>
 
 <h2>Soft Skills</h2>
 
 <h3 style="text-align:center">
-<span id="typing2"></span>
+<span id="typing-soft"></span>
 </h3>
 
 </section>
@@ -256,27 +323,18 @@ and generated insights using Python.
 <div class="cards">
 
 <div class="card">
-
 <img src="aws_certificate.png">
-
 <h3>AWS Academy Cloud Foundations</h3>
-
 </div>
 
 <div class="card">
-
 <img src="datascience_certificate.png">
-
 <h3>Advanced Course in Data Science</h3>
-
 </div>
 
 <div class="card">
-
 <img src="projit_certificate.png">
-
 <h3>PROJIT National Level Competition</h3>
-
 </div>
 
 </div>
@@ -328,7 +386,6 @@ please feel free to reach out via LinkedIn or email.
 <script>
 
 var typed = new Typed("#typing",{
-
 strings:[
 "Data Analyst",
 "Data Scientist",
@@ -336,27 +393,31 @@ strings:[
 "Power BI Specialist",
 "AWS Enthusiast"
 ],
-
 typeSpeed:60,
 backSpeed:40,
 loop:true
-
 });
 
-var typed2 = new Typed("#typing2",{
-
+var typedSkills = new Typed("#typing-skills",{
 strings:[
-"Analytical Thinking — Collaboration — Problem Solving — Attention to Detail",
-"Data Analytics | Visualization | Databases | Excel | Cloud | Programming"
+"Data Analytics & ML | Visualization & GIS | Databases | Excel & Reporting | Cloud & Tools | Programming Languages"
 ],
-
-typeSpeed:50,
+typeSpeed:60,
 backSpeed:30,
 loop:true
+});
 
+var typedSoft = new Typed("#typing-soft",{
+strings:[
+"Analytical Thinking — Collaboration — Problem Solving — Attention to Detail"
+],
+typeSpeed:60,
+backSpeed:30,
+loop:true
 });
 
 </script>
 
 </body>
 </html>
+```
