@@ -99,15 +99,16 @@ border-radius:8px;
 margin-bottom:15px;
 }
 
-/* BLUE SKILL BUTTONS */
+/* Blue skill buttons */
 
 .skill-btn{
 display:inline-block;
 background:#38bdf8;
-color:#000;
-padding:10px 18px;
+color:black;
+padding:8px 14px;
 border-radius:6px;
-margin:6px;
+margin:5px;
+font-size:14px;
 font-weight:bold;
 }
 
@@ -115,8 +116,6 @@ font-weight:bold;
 background:#0ea5e9;
 cursor:pointer;
 }
-
-/* typing styles */
 
 #typing-skills{
 color:#38bdf8;
@@ -192,67 +191,75 @@ Passionate about turning data into insights and building ML models.
 
 <h2>Technical Skills</h2>
 
-<h3 style="text-align:center;margin-bottom:30px;">
+<h3 style="text-align:center;margin-bottom:40px;">
 <span id="typing-skills"></span>
 </h3>
-
-<div style="text-align:center;margin-bottom:40px;">
-
-<span class="skill-btn">Data Analytics & ML</span>
-<span class="skill-btn">Visualization & GIS</span>
-<span class="skill-btn">Databases</span>
-<span class="skill-btn">Excel & Reporting</span>
-<span class="skill-btn">Cloud & Tools</span>
-<span class="skill-btn">Programming Languages</span>
-
-</div>
 
 <div class="cards">
 
 <div class="card">
 <h3>Data Analytics & ML</h3>
-<p>
-Python (Pandas, NumPy), Scikit-learn, Basic TensorFlow,
-Statistical Analysis, Exploratory Data Analysis (EDA),
-Natural Language Processing (spaCy)
-</p>
+
+<span class="skill-btn">Python (Pandas)</span>
+<span class="skill-btn">NumPy</span>
+<span class="skill-btn">Scikit-learn</span>
+<span class="skill-btn">TensorFlow</span>
+<span class="skill-btn">EDA</span>
+<span class="skill-btn">NLP (spaCy)</span>
+
 </div>
 
 <div class="card">
 <h3>Visualization & GIS</h3>
-<p>
-Power BI, Tableau, GeoPandas, QGIS, Google Earth Engine
-</p>
+
+<span class="skill-btn">Power BI</span>
+<span class="skill-btn">Tableau</span>
+<span class="skill-btn">GeoPandas</span>
+<span class="skill-btn">QGIS</span>
+<span class="skill-btn">Google Earth Engine</span>
+
 </div>
 
 <div class="card">
 <h3>Databases</h3>
-<p>
-MySQL, SQL
-</p>
+
+<span class="skill-btn">MySQL</span>
+<span class="skill-btn">SQL</span>
+
 </div>
 
 <div class="card">
 <h3>Excel & Reporting</h3>
-<p>
-Advanced Excel (Pivot Tables, VLOOKUP/XLOOKUP, IF functions,
-Data Cleaning, Charts)
-</p>
+
+<span class="skill-btn">Pivot Tables</span>
+<span class="skill-btn">VLOOKUP</span>
+<span class="skill-btn">XLOOKUP</span>
+<span class="skill-btn">IF Functions</span>
+<span class="skill-btn">Charts</span>
+
 </div>
 
 <div class="card">
 <h3>Cloud & Tools</h3>
-<p>
-AWS (EC2, IAM, S3, RDS, VPC), Git, GitHub,
-Jupyter Notebook, VS Code
-</p>
+
+<span class="skill-btn">AWS EC2</span>
+<span class="skill-btn">IAM</span>
+<span class="skill-btn">S3</span>
+<span class="skill-btn">RDS</span>
+<span class="skill-btn">VPC</span>
+<span class="skill-btn">Git</span>
+<span class="skill-btn">GitHub</span>
+
 </div>
 
 <div class="card">
 <h3>Programming Languages</h3>
-<p>
-Python, C, C++, Java
-</p>
+
+<span class="skill-btn">Python</span>
+<span class="skill-btn">C</span>
+<span class="skill-btn">C++</span>
+<span class="skill-btn">Java</span>
+
 </div>
 
 </div>
@@ -274,42 +281,21 @@ Python, C, C++, Java
 <div class="cards">
 
 <div class="card">
-
 <img src="aws_cloud_project.png">
-
 <h3>AWS Cloud Architecture</h3>
-
-<p>
-Designed cloud architecture using EC2, S3, IAM and VPC
-to deploy secure web applications.
-</p>
-
+<p>Designed cloud architecture using EC2, S3, IAM and VPC.</p>
 </div>
 
 <div class="card">
-
 <img src="diabetes_ml_project.png">
-
 <h3>Diabetes Detection ML Model</h3>
-
-<p>
-Built a classification model using Python and
-Scikit-learn to detect diabetes risk.
-</p>
-
+<p>Built ML classification model using Python and Scikit-learn.</p>
 </div>
 
 <div class="card">
-
 <img src="olist_dashboard.png">
-
 <h3>E-commerce Sales Analysis</h3>
-
-<p>
-Performed EDA on real-world e-commerce data
-and generated insights using Python.
-</p>
-
+<p>Performed EDA and visualizations using Python.</p>
 </div>
 
 </div>
@@ -348,15 +334,12 @@ and generated insights using Python.
 <p style="text-align:center">
 
 <i class="fa-solid fa-phone"></i> +91 8237642318
-
 <br><br>
 
 <i class="fa-solid fa-envelope"></i> pshivsharne@gmail.com
-
 <br><br>
 
 <i class="fa-brands fa-linkedin"></i>
-
 <a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" style="color:#38bdf8">
 LinkedIn Profile
 </a>
@@ -402,8 +385,9 @@ var typedSkills = new Typed("#typing-skills",{
 strings:[
 "Data Analytics & ML | Visualization & GIS | Databases | Excel & Reporting | Cloud & Tools | Programming Languages"
 ],
-typeSpeed:60,
-backSpeed:30,
+typeSpeed:30,
+backSpeed:15,
+backDelay:2000,
 loop:true
 });
 
@@ -411,8 +395,8 @@ var typedSoft = new Typed("#typing-soft",{
 strings:[
 "Analytical Thinking — Collaboration — Problem Solving — Attention to Detail"
 ],
-typeSpeed:60,
-backSpeed:30,
+typeSpeed:30,
+backSpeed:15,
 loop:true
 });
 
