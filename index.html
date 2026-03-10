@@ -1,42 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pratiksha Shivsharne | Data Analyst</title>
+<title>Pratiksha Shivsharne | Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
-scroll-behavior:smooth;
-}
-
 body{
+font-family: Arial, sans-serif;
+margin:0;
 background:#0f172a;
 color:white;
-transition:0.3s;
 }
-
-body.light{
-background:#f1f5f9;
-color:#0f172a;
-}
-
-/* NAVBAR */
 
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 10%;
+padding:20px;
 background:#020617;
 position:sticky;
 top:0;
@@ -44,129 +31,89 @@ top:0;
 
 nav a{
 color:white;
+margin:0 15px;
 text-decoration:none;
-margin-left:20px;
+font-weight:500;
 }
-
-.toggle{
-cursor:pointer;
-background:#0ea5e9;
-padding:6px 12px;
-border-radius:6px;
-}
-
-/* HERO */
 
 .hero{
 display:flex;
-flex-wrap:wrap;
 align-items:center;
 justify-content:center;
-padding:100px 10%;
-gap:40px;
-background:linear-gradient(135deg,#2563eb,#1e3a8a);
+padding:80px 10%;
+gap:50px;
 }
 
 .hero img{
 width:220px;
 border-radius:50%;
-border:5px solid white;
+border:4px solid #38bdf8;
 }
 
-.hero h1{
-font-size:45px;
+.hero-text h1{
+font-size:40px;
 }
 
-.hero span{
-color:#60a5fa;
+#typing{
+color:#38bdf8;
+font-weight:bold;
 }
-
-/* BUTTON */
 
 .btn{
-margin-top:15px;
-padding:12px 25px;
-border:none;
+display:inline-block;
+padding:12px 20px;
+background:#38bdf8;
+color:black;
 border-radius:6px;
-background:#0ea5e9;
-color:white;
-cursor:pointer;
+margin-top:20px;
+text-decoration:none;
+font-weight:bold;
 }
 
-.btn:hover{
-background:#0284c7;
+.section{
+padding:70px 10%;
 }
 
-/* SECTION */
-
-section{
-padding:80px 10%;
-max-width:1100px;
-margin:auto;
+.section h2{
+text-align:center;
+margin-bottom:40px;
+font-size:32px;
 }
 
-h2{
-color:#60a5fa;
-margin-bottom:30px;
-}
-
-/* SKILLS */
-
-.bar{
-background:#1e293b;
-height:8px;
-border-radius:5px;
-margin-bottom:20px;
-}
-
-.fill{
-background:#0ea5e9;
-height:8px;
-}
-
-/* GRID */
-
-.grid{
+.cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
-/* CARD */
-
 .card{
 background:#1e293b;
 padding:20px;
 border-radius:10px;
-transition:0.3s;
+text-align:center;
 }
 
-.card:hover{
-transform:scale(1.05);
-}
-
-/* DASHBOARD */
-
-.gallery img{
+.card img{
 width:100%;
-border-radius:10px;
+border-radius:8px;
 }
 
-/* CONTACT */
-
-input,textarea{
-width:100%;
+.certificate img{
+height:150px;
+object-fit:contain;
+background:white;
 padding:10px;
-margin-top:10px;
-border-radius:6px;
-border:none;
 }
 
 footer{
 text-align:center;
-padding:20px;
+padding:40px;
 background:#020617;
-margin-top:40px;
+}
+
+.contact i{
+margin-right:10px;
+color:#38bdf8;
 }
 
 </style>
@@ -177,216 +124,166 @@ margin-top:40px;
 
 <nav>
 
-<h2>Pratiksha Shivsharne</h2>
+<h2>Pratiksha</h2>
 
 <div>
-
 <a href="#about">About</a>
-<a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
-<a href="#dashboard">Dashboards</a>
-<a href="#cert">Certificates</a>
+<a href="#certifications">Certifications</a>
 <a href="#contact">Contact</a>
-
-<span class="toggle" onclick="toggleMode()">🌙</span>
-
 </div>
 
 </nav>
-
-<!-- HERO -->
 
 <section class="hero">
 
 <img src="profile.jpg">
 
-<div>
+<div class="hero-text">
 
-<h1>Hi I'm <span>Pratiksha</span></h1>
+<h1>Pratiksha Shivsharne</h1>
 
-<h3><span id="typing"></span></h3>
+<h2>I am a <span id="typing"></span></h2>
 
-<a href="Pratiksha_Shivsharne_Resume.pdf" download>
-<button class="btn">Download Resume</button>
-</a>
+<p>
+Passionate about data analytics, machine learning and cloud technologies.
+I enjoy transforming raw data into meaningful insights and building
+data-driven solutions.
+</p>
 
-<a href="https://www.linkedin.com/in/pratiksha-shivsharne">
-<button class="btn">LinkedIn</button>
+<a href="Pratiksha_Shivsharne_Resume.pdf" download class="btn">
+Download Resume
 </a>
 
 </div>
 
 </section>
 
-<!-- ABOUT -->
-
-<section id="about">
+<section class="section" id="about">
 
 <h2>About Me</h2>
 
-<p>
+<p style="text-align:center;max-width:700px;margin:auto;">
+I am a data enthusiast with knowledge of Data Science, Machine Learning
+and Cloud Computing. I have worked on real-world datasets to analyze
+business trends, develop predictive models and build cloud-based
+applications. I aim to use data to drive meaningful insights and
+decision-making.
+</p>
 
-Data Analyst skilled in Python, SQL, Power BI, Tableau and AWS.
-Passionate about transforming data into actionable insights.
+</section>
+
+<section class="section" id="projects">
+
+<h2>Projects</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="aws_cloud_project.png">
+<h3>AWS Cloud Architecture</h3>
+<p>
+Designed cloud architecture using EC2, S3, IAM and VPC to deploy a
+secure web application environment on AWS.
+</p>
+</div>
+
+<div class="card">
+<img src="diabetes_ml_project.png">
+<h3>Diabetic Detection Model</h3>
+<p>
+Built a machine learning model using Pandas and Scikit-learn to predict
+diabetes risk based on patient diagnostic data.
+</p>
+</div>
+
+<div class="card">
+<img src="olist_dashboard.png">
+<h3>Olist E-commerce Data Analysis</h3>
+<p>
+Performed EDA and created visualizations to identify trends in sales,
+customer behavior and delivery performance.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="certifications">
+
+<h2>Certifications</h2>
+
+<div class="cards">
+
+<div class="card certificate">
+<img src="AWS Academy Cloud Foundations.png">
+<h3>AWS Academy Cloud Foundations</h3>
+<a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" class="btn">View Certificate</a>
+</div>
+
+<div class="card certificate">
+<img src="Advanced Course in Data Science.png">
+<h3>Advanced Course in Data Science</h3>
+<a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" class="btn">View Certificate</a>
+</div>
+
+<div class="card certificate">
+<img src="National Level Competition Participated in PROJIT.png">
+<h3>PROJIT National Level Competition</h3>
+<a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" class="btn">View Certificate</a>
+</div>
+
+</div>
+
+</section>
+
+<section class="section contact" id="contact">
+
+<h2>Contact</h2>
+
+<p style="text-align:center">
+
+<i class="fa-solid fa-phone"></i>
+Phone: +91 8237642318
+<br><br>
+
+<i class="fa-solid fa-envelope"></i>
+Email: pshivsharne@gmail.com
+<br><br>
+
+<i class="fa-brands fa-linkedin"></i>
+<a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" style="color:#38bdf8;">
+LinkedIn Profile
+</a>
 
 </p>
 
 </section>
 
-<!-- SKILLS -->
-
-<section id="skills">
-
-<h2>Skills</h2>
-
-Python
-<div class="bar"><div class="fill" style="width:90%"></div></div>
-
-SQL
-<div class="bar"><div class="fill" style="width:85%"></div></div>
-
-Power BI
-<div class="bar"><div class="fill" style="width:80%"></div></div>
-
-Machine Learning
-<div class="bar"><div class="fill" style="width:75%"></div></div>
-
-AWS
-<div class="bar"><div class="fill" style="width:70%"></div></div>
-
-</section>
-
-<!-- PROJECTS AUTO GITHUB -->
-
-<section id="projects">
-
-<h2>GitHub Projects</h2>
-
-<div id="githubProjects" class="grid"></div>
-
-</section>
-
-<!-- DASHBOARD -->
-
-<section id="dashboard">
-
-<h2>Power BI Dashboards</h2>
-
-<div class="grid gallery">
-
-<img src="dashboard1.png">
-<img src="dashboard2.png">
-<img src="dashboard3.png">
-
-</div>
-
-</section>
-
-<!-- CERTIFICATES -->
-
-<section id="cert">
-
-<h2>Certificates</h2>
-
-<div class="card">
-<a href="PASTE_LINKEDIN_FEATURED_LINK_HERE" target="_blank">
-AWS Cloud Foundations Certificate
-</a>
-</div>
-
-<div class="card">
-<a href="PASTE_LINKEDIN_FEATURED_LINK_HERE" target="_blank">
-Advanced Data Science Course
-</a>
-</div>
-
-<div class="card">
-<a href="PASTE_LINKEDIN_FEATURED_LINK_HERE" target="_blank">
-MIT-ADT AI Test Case Generation Certificate
-</a>
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<form action="https://formspree.io/f/yourID" method="POST">
-
-<input type="text" name="name" placeholder="Name" required>
-
-<input type="email" name="email" placeholder="Email" required>
-
-<textarea name="message" placeholder="Message"></textarea>
-
-<button class="btn">Send Message</button>
-
-</form>
-
-</section>
-
 <footer>
 
-© 2026 Pratiksha Shivsharne | Data Analyst Portfolio
+<p>© 2026 Pratiksha Shivsharne | Data Portfolio</p>
 
 </footer>
 
 <script>
 
-/* typing animation */
-
 var typed = new Typed("#typing",{
 
-strings:["Data Analyst","Python Developer","Power BI Specialist","AWS Enthusiast"],
+strings:[
+"Data Analyst",
+"Data Science",
+"AI/ML Engineer",
+"Power BI Specialist",
+"AWS Enthusiast"
+],
 
 typeSpeed:60,
 backSpeed:40,
 loop:true
 
-})
-
-/* dark mode */
-
-function toggleMode(){
-document.body.classList.toggle("light")
-}
-
-/* github auto projects */
-
-fetch("https://api.github.com/users/pratiksha-shivsharne/repos")
-
-.then(res=>res.json())
-
-.then(data=>{
-
-let container=document.getElementById("githubProjects")
-
-data.slice(0,6).forEach(repo=>{
-
-container.innerHTML+=`
-
-<div class="card">
-
-<h3>${repo.name}</h3>
-
-<p>${repo.description || "GitHub Project"}</p>
-
-<a href="${repo.html_url}" target="_blank">
-
-<button class="btn">View Project</button>
-
-</a>
-
-</div>
-
-`
-
-})
-
-})
+});
 
 </script>
 
