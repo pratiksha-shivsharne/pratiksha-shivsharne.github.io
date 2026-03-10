@@ -71,20 +71,26 @@ text-decoration:none;
 font-weight:bold;
 }
 
-.section{
-padding:70px 10%;
+.heading-btn{
+display:inline-block;
+background:#38bdf8;
+color:black;
+padding:10px 20px;
+border-radius:6px;
+font-weight:bold;
+margin-bottom:30px;
 }
 
-.section h2{
+.section{
+padding:70px 10%;
 text-align:center;
-font-size:32px;
-margin-bottom:40px;
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
+margin-top:30px;
 }
 
 .card{
@@ -166,9 +172,9 @@ Download Resume
 
 <section class="section" id="about">
 
-<h2>About Me</h2>
+<h2 class="heading-btn">About Me</h2>
 
-<p style="max-width:700px;margin:auto;text-align:center">
+<p style="max-width:700px;margin:auto">
 
 Enthusiastic Data Analyst with hands-on experience in data analysis using Python, SQL, Advanced Excel, Power BI, and Tableau.
 
@@ -184,43 +190,42 @@ Quick learner with strong analytical thinking and a passion for turning data int
 
 <section class="section" id="skills">
 
-<h2>Technical Skills</h2>
+<h2 class="heading-btn">Technical Skills</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>Data Analytics & ML</h3>
+<h3 class="heading-btn">Data Analytics & ML</h3>
 <p>
-Python (Pandas, NumPy), Scikit-learn, Basic TensorFlow,
-Statistical Analysis, Exploratory Data Analysis (EDA),
-Natural Language Processing (spaCy)
+Python (Pandas, NumPy), Scikit-learn, TensorFlow, Statistical Analysis,
+EDA, NLP (spaCy)
 </p>
 </div>
 
 <div class="card">
-<h3>Visualization & GIS</h3>
+<h3 class="heading-btn">Visualization & GIS</h3>
 <p>
 Power BI, Tableau, GeoPandas, QGIS, Google Earth Engine
 </p>
 </div>
 
 <div class="card">
-<h3>Databases</h3>
+<h3 class="heading-btn">Databases</h3>
 <p>
 MySQL, SQL
 </p>
 </div>
 
 <div class="card">
-<h3>Excel & Reporting</h3>
+<h3 class="heading-btn">Excel & Reporting</h3>
 <p>
-Advanced Excel (Pivot Tables, VLOOKUP/XLOOKUP, IF functions,
-Data Cleaning, Charts)
+Advanced Excel, Pivot Tables, VLOOKUP/XLOOKUP,
+Data Cleaning, Charts
 </p>
 </div>
 
 <div class="card">
-<h3>Cloud & Tools</h3>
+<h3 class="heading-btn">Cloud & Tools</h3>
 <p>
 AWS (EC2, IAM, S3, RDS, VPC), Git, GitHub,
 Jupyter Notebook, VS Code
@@ -228,7 +233,7 @@ Jupyter Notebook, VS Code
 </div>
 
 <div class="card">
-<h3>Programming Languages</h3>
+<h3 class="heading-btn">Programming Languages</h3>
 <p>
 Python, C, C++, Java
 </p>
@@ -236,9 +241,9 @@ Python, C, C++, Java
 
 </div>
 
-<h2 style="margin-top:60px">Soft Skills</h2>
+<h2 class="heading-btn" style="margin-top:60px">Soft Skills</h2>
 
-<p style="text-align:center;font-size:18px">
+<p>
 
 Analytical Thinking — Collaboration — Problem Solving — Attention to Detail
 
@@ -248,7 +253,7 @@ Analytical Thinking — Collaboration — Problem Solving — Attention to Detai
 
 <section class="section" id="projects">
 
-<h2>Projects</h2>
+<h2 class="heading-btn">Projects</h2>
 
 <div class="cards">
 
@@ -259,7 +264,7 @@ Analytical Thinking — Collaboration — Problem Solving — Attention to Detai
 <h3>AWS Cloud Architecture</h3>
 
 <p>
-Designed cloud architecture using EC2, S3, IAM and VPC to deploy a secure web application environment on AWS.
+Designed a cloud architecture integrating EC2 (compute), S3 (storage), IAM (security), and VPC (networking) to deploy a secure web application environment on AWS.
 </p>
 
 </div>
@@ -271,7 +276,9 @@ Designed cloud architecture using EC2, S3, IAM and VPC to deploy a secure web ap
 <h3>Diabetic Detection ML Model</h3>
 
 <p>
-Developed a predictive classification model using patient diagnostic data to identify diabetes risk using Python and Scikit-learn.
+Developed a predictive classification model using patient diagnostic data to identify diabetes risk;
+performed data cleaning and exploratory data analysis (EDA) with Pandas, built and trained the model using Scikit-learn,
+and evaluated performance using Accuracy and Recall with a focus on reducing false negatives.
 </p>
 
 </div>
@@ -283,7 +290,10 @@ Developed a predictive classification model using patient diagnostic data to ide
 <h3>E-commerce Sales Analysis</h3>
 
 <p>
-Analyzed real-world e-commerce sales data using Python and created visualizations to generate business insights.
+Built an end-to-end e-commerce data analysis project using Python. 
+Cleaned and analyzed real-world sales data, performed EDA, 
+and created visualizations to identify trends in customer behavior, sales performance, and delivery efficiency.
+Generated business insights to support data-driven decisions.
 </p>
 
 </div>
@@ -294,7 +304,7 @@ Analyzed real-world e-commerce sales data using Python and created visualization
 
 <section class="section" id="certifications">
 
-<h2>Certifications</h2>
+<h2 class="heading-btn">Certifications</h2>
 
 <div class="cards">
 
@@ -340,7 +350,7 @@ View Certificate
 
 <section class="section contact" id="contact">
 
-<h2>Contact</h2>
+<h2 class="heading-btn">Contact</h2>
 
 <p>
 
