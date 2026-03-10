@@ -81,6 +81,16 @@ font-weight:bold;
 margin-bottom:30px;
 }
 
+.skill-btn{
+display:inline-block;
+background:#22c55e;
+color:white;
+padding:8px 16px;
+border-radius:6px;
+font-weight:bold;
+margin-bottom:15px;
+}
+
 .section{
 padding:70px 10%;
 text-align:center;
@@ -113,13 +123,21 @@ background:white;
 padding:10px;
 }
 
-.contact{
-text-align:center;
-}
-
 .contact i{
 color:#38bdf8;
 margin-right:10px;
+}
+
+.blink-text{
+font-weight:bold;
+color:#38bdf8;
+animation: blink 1.5s infinite;
+}
+
+@keyframes blink{
+0%{opacity:1;}
+50%{opacity:0;}
+100%{opacity:1;}
 }
 
 footer{
@@ -195,29 +213,29 @@ Quick learner with strong analytical thinking and a passion for turning data int
 <div class="cards">
 
 <div class="card">
-<h3 class="heading-btn">Data Analytics & ML</h3>
+<h3 class="skill-btn">Data Analytics & ML</h3>
 <p>
-Python (Pandas, NumPy), Scikit-learn, TensorFlow, Statistical Analysis,
-EDA, NLP (spaCy)
+Python (Pandas, NumPy), Scikit-learn, TensorFlow,
+Statistical Analysis, EDA, NLP (spaCy)
 </p>
 </div>
 
 <div class="card">
-<h3 class="heading-btn">Visualization & GIS</h3>
+<h3 class="skill-btn">Visualization & GIS</h3>
 <p>
 Power BI, Tableau, GeoPandas, QGIS, Google Earth Engine
 </p>
 </div>
 
 <div class="card">
-<h3 class="heading-btn">Databases</h3>
+<h3 class="skill-btn">Databases</h3>
 <p>
 MySQL, SQL
 </p>
 </div>
 
 <div class="card">
-<h3 class="heading-btn">Excel & Reporting</h3>
+<h3 class="skill-btn">Excel & Reporting</h3>
 <p>
 Advanced Excel, Pivot Tables, VLOOKUP/XLOOKUP,
 Data Cleaning, Charts
@@ -225,7 +243,7 @@ Data Cleaning, Charts
 </div>
 
 <div class="card">
-<h3 class="heading-btn">Cloud & Tools</h3>
+<h3 class="skill-btn">Cloud & Tools</h3>
 <p>
 AWS (EC2, IAM, S3, RDS, VPC), Git, GitHub,
 Jupyter Notebook, VS Code
@@ -233,7 +251,7 @@ Jupyter Notebook, VS Code
 </div>
 
 <div class="card">
-<h3 class="heading-btn">Programming Languages</h3>
+<h3 class="skill-btn">Programming Languages</h3>
 <p>
 Python, C, C++, Java
 </p>
@@ -244,9 +262,7 @@ Python, C, C++, Java
 <h2 class="heading-btn" style="margin-top:60px">Soft Skills</h2>
 
 <p>
-
-Analytical Thinking — Collaboration — Problem Solving — Attention to Detail
-
+<span id="softskills"></span>
 </p>
 
 </section>
@@ -264,7 +280,7 @@ Analytical Thinking — Collaboration — Problem Solving — Attention to Detai
 <h3>AWS Cloud Architecture</h3>
 
 <p>
-Designed a cloud architecture integrating EC2 (compute), S3 (storage), IAM (security), and VPC (networking) to deploy a secure web application environment on AWS.
+Designed cloud architecture using EC2, S3, IAM and VPC to deploy a secure web application environment on AWS.
 </p>
 
 </div>
@@ -276,9 +292,7 @@ Designed a cloud architecture integrating EC2 (compute), S3 (storage), IAM (secu
 <h3>Diabetic Detection ML Model</h3>
 
 <p>
-Developed a predictive classification model using patient diagnostic data to identify diabetes risk;
-performed data cleaning and exploratory data analysis (EDA) with Pandas, built and trained the model using Scikit-learn,
-and evaluated performance using Accuracy and Recall with a focus on reducing false negatives.
+Built a predictive ML model using Python and Scikit-learn to detect diabetes risk.
 </p>
 
 </div>
@@ -290,10 +304,7 @@ and evaluated performance using Accuracy and Recall with a focus on reducing fal
 <h3>E-commerce Sales Analysis</h3>
 
 <p>
-Built an end-to-end e-commerce data analysis project using Python. 
-Cleaned and analyzed real-world sales data, performed EDA, 
-and created visualizations to identify trends in customer behavior, sales performance, and delivery efficiency.
-Generated business insights to support data-driven decisions.
+Analyzed e-commerce sales data using Python and created dashboards to generate insights.
 </p>
 
 </div>
@@ -348,7 +359,7 @@ View Certificate
 
 </section>
 
-<section class="section contact" id="contact">
+<section class="section" id="contact">
 
 <h2 class="heading-btn">Contact</h2>
 
@@ -380,9 +391,11 @@ LinkedIn Profile
 🤝 Open for Collaboration
 </h3>
 
-<p>
-I am open to collaborating on Data Analytics, Machine Learning, and Cloud-based projects.  
+<p class="blink-text">
+
+I am open to collaborating on Data Analytics, Machine Learning, and Cloud-based projects.
 If anyone is interested, please feel free to reach out via LinkedIn or email.
+
 </p>
 
 </section>
@@ -403,6 +416,21 @@ strings:[
 "AI / ML Enthusiast",
 "Power BI Specialist",
 "AWS Enthusiast"
+],
+
+typeSpeed:60,
+backSpeed:40,
+loop:true
+
+});
+
+var softskills = new Typed("#softskills",{
+
+strings:[
+"Analytical Thinking",
+"Collaboration",
+"Problem Solving",
+"Attention to Detail"
 ],
 
 typeSpeed:60,
