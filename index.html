@@ -1,94 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Pratiksha Shivsharne | Data Analyst</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
 <style>
 
-body{
-font-family: Arial;
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
 background:#0f172a;
 color:white;
 }
 
-header{
-text-align:center;
-padding:80px 20px;
-background:linear-gradient(135deg,#2563eb,#1e3a8a);
-}
-
-header h1{
-font-size:48px;
-margin:0;
-}
-
-header p{
-font-size:20px;
-}
+/* NAVBAR */
 
 nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
 background:#020617;
-padding:15px;
-text-align:center;
+position:sticky;
+top:0;
+}
+
+nav h2{
+color:#60a5fa;
 }
 
 nav a{
 color:white;
-margin:15px;
 text-decoration:none;
-font-size:18px;
+margin-left:20px;
 }
 
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(135deg,#2563eb,#1e3a8a);
+}
+
+.hero h1{
+font-size:55px;
+}
+
+.hero p{
+font-size:22px;
+margin-top:10px;
+}
+
+.btn{
+margin-top:20px;
+padding:12px 28px;
+background:#0ea5e9;
+border:none;
+border-radius:6px;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+/* SECTION */
+
 section{
-padding:60px 20px;
-max-width:1000px;
-margin:auto;
+padding:80px 10%;
 }
 
 h2{
 color:#60a5fa;
+margin-bottom:30px;
 }
 
-.skills span{
-background:#2563eb;
-padding:10px 18px;
-margin:6px;
-display:inline-block;
-border-radius:20px;
+/* SKILLS */
+
+.skill{
+margin-bottom:20px;
+}
+
+.bar{
+background:#1e293b;
+height:8px;
+border-radius:5px;
+}
+
+.fill{
+background:#0ea5e9;
+height:8px;
+border-radius:5px;
+}
+
+/* PROJECTS */
+
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .project{
 background:#1e293b;
 padding:20px;
-margin-top:20px;
 border-radius:10px;
+transition:0.3s;
 }
+
+.project:hover{
+transform:scale(1.05);
+}
+
+/* CERTIFICATIONS */
 
 .cert{
 background:#1e293b;
 padding:15px;
-margin-top:15px;
+margin-top:10px;
 border-radius:8px;
 }
 
-button{
-padding:12px 25px;
-background:#2563eb;
-border:none;
-color:white;
-border-radius:6px;
-font-size:16px;
+/* CONTACT */
+
+.contact p{
+margin-top:10px;
 }
 
+/* FOOTER */
+
 footer{
-background:#020617;
 text-align:center;
-padding:20px;
-margin-top:40px;
+padding:25px;
+background:#020617;
 }
 
 </style>
@@ -97,36 +152,46 @@ margin-top:40px;
 
 <body>
 
-<header>
-
-<h1>Pratiksha Shivsharne</h1>
-
-<p>Data Analyst | Python | SQL | AWS</p>
-
-<a href="resume.pdf">
-<button>Download Resume</button>
-</a>
-
-</header>
-
 <nav>
+
+<h2>Pratiksha</h2>
+
+<div>
 
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
-<a href="#certifications">Certifications</a>
+<a href="#cert">Certifications</a>
 <a href="#contact">Contact</a>
 
+</div>
+
 </nav>
+
+<section class="hero">
+
+<h1>Pratiksha Shivsharne</h1>
+
+<p>Data Analyst | Python | SQL | Power BI | AWS</p>
+
+<a href="https://www.linkedin.com/in/pratiksha-shivsharne">
+<button class="btn">Connect on LinkedIn</button>
+</a>
+
+</section>
 
 <section id="about">
 
 <h2>About Me</h2>
 
 <p>
-Enthusiastic Data Analyst with experience in Python, SQL, Power BI, Tableau,
-and AWS Cloud. Skilled in data cleaning, exploratory data analysis, and
-building dashboards that convert data into meaningful insights.
+
+I am a passionate Data Analyst skilled in Python, SQL, Power BI,
+Tableau and AWS Cloud. I enjoy transforming raw data into
+actionable insights using data analysis and machine learning.
+
+Currently pursuing B.Tech in Information Technology at MIT-ADT University.
+
 </p>
 
 </section>
@@ -135,21 +200,29 @@ building dashboards that convert data into meaningful insights.
 
 <h2>Technical Skills</h2>
 
-<div class="skills">
+<div class="skill">
+Python
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
 
-<span>Python</span>
-<span>Pandas</span>
-<span>NumPy</span>
-<span>SQL</span>
-<span>Power BI</span>
-<span>Tableau</span>
-<span>Advanced Excel</span>
-<span>AWS EC2</span>
-<span>AWS S3</span>
-<span>AWS RDS</span>
-<span>Machine Learning</span>
-<span>GitHub</span>
+<div class="skill">
+SQL
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
 
+<div class="skill">
+Power BI
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+Machine Learning
+<div class="bar"><div class="fill" style="width:75%"></div></div>
+</div>
+
+<div class="skill">
+AWS
+<div class="bar"><div class="fill" style="width:70%"></div></div>
 </div>
 
 </section>
@@ -158,13 +231,15 @@ building dashboards that convert data into meaningful insights.
 
 <h2>Projects</h2>
 
+<div class="project-grid">
+
 <div class="project">
 
 <h3>Diabetic Detection</h3>
 
 <p>
-Built a machine learning classification model to detect diabetes risk
-using patient data. Used Pandas for EDA and Scikit-learn for model training.
+Machine learning model built with Python and Scikit-learn
+to detect diabetes risk using medical data.
 </p>
 
 </div>
@@ -174,33 +249,29 @@ using patient data. Used Pandas for EDA and Scikit-learn for model training.
 <h3>Geo-Tagging Plantation Analysis</h3>
 
 <p>
-Developed geospatial plantation monitoring system using QGIS and
-Google Earth Engine with machine learning analysis.
+Geospatial plantation monitoring system using
+QGIS and Google Earth Engine with ML insights.
 </p>
 
 </div>
 
+</div>
+
 </section>
 
-<section id="certifications">
+<section id="cert">
 
 <h2>Certifications</h2>
 
-<div class="cert">
-AWS Academy Cloud Foundations
-</div>
+<div class="cert">AWS Academy Cloud Foundations</div>
 
-<div class="cert">
-Advanced Course in Data Science
-</div>
+<div class="cert">Advanced Course in Data Science</div>
 
-<div class="cert">
-National Level Project Competition – Projit
-</div>
+<div class="cert">National Level Project Competition – Projit</div>
 
 </section>
 
-<section id="contact">
+<section id="contact" class="contact">
 
 <h2>Contact</h2>
 
@@ -219,7 +290,7 @@ linkedin.com/in/pratiksha-shivsharne
 
 <footer>
 
-<p>© 2026 Pratiksha Shivsharne</p>
+<p>© 2026 Pratiksha Shivsharne | Data Analyst Portfolio</p>
 
 </footer>
 
