@@ -23,7 +23,7 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 8%;
+padding:14px 8%;
 background:#020617;
 }
 
@@ -37,8 +37,8 @@ text-decoration:none;
 display:flex;
 align-items:center;
 justify-content:center;
-padding:60px 8%;
-gap:40px;
+padding:50px 8%;
+gap:35px;
 flex-wrap:wrap;
 }
 
@@ -70,19 +70,19 @@ font-weight:bold;
 }
 
 .section{
-padding:55px 8%;
+padding:50px 8%;
 }
 
 .section h2{
 text-align:center;
 font-size:30px;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
+gap:18px;
 }
 
 .card{
@@ -98,7 +98,6 @@ margin-bottom:10px;
 }
 
 .typing-box{
-
 background:#38bdf8;
 color:white;
 font-weight:bold;
@@ -108,7 +107,6 @@ display:block;
 margin:15px auto;
 text-align:center;
 width:max-content;
-
 }
 
 .contact{
@@ -122,7 +120,7 @@ margin-right:8px;
 
 footer{
 text-align:center;
-padding:20px;
+padding:18px;
 background:#020617;
 }
 
@@ -140,7 +138,6 @@ background:#020617;
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
-<a href="#certifications">Certificates</a>
 <a href="#contact">Contact</a>
 </div>
 
@@ -173,7 +170,7 @@ Download Resume
 <h2>About Me</h2>
 
 <p style="max-width:700px;margin:auto;text-align:center">
-Enthusiastic Data Analyst with hands-on experience in data analysis using Python, SQL, Advanced Excel, Power BI, and Tableau. 
+Enthusiastic Data Analyst with hands-on experience in Python, SQL, Advanced Excel, Power BI, and Tableau.
 Strong understanding of data cleaning, exploratory data analysis (EDA), and dashboard creation.
 Familiar with AWS cloud services including EC2, IAM, S3, RDS, and VPC.
 Quick learner with strong analytical thinking and a passion for turning data into actionable insights.
@@ -192,9 +189,8 @@ Quick learner with strong analytical thinking and a passion for turning data int
 <div class="card">
 <h3>Data Analytics & ML</h3>
 <p>
-Python (Pandas, NumPy), Scikit-learn, Basic TensorFlow,
-Statistical Analysis, Exploratory Data Analysis (EDA),
-Natural Language Processing (spaCy)
+Python (Pandas, NumPy), Scikit-learn, TensorFlow,
+Statistical Analysis, EDA, NLP (spaCy)
 </p>
 </div>
 
@@ -215,8 +211,8 @@ MySQL, SQL
 <div class="card">
 <h3>Excel & Reporting</h3>
 <p>
-Advanced Excel (Pivot Tables, VLOOKUP/XLOOKUP, IF functions,
-Data Cleaning, Charts)
+Advanced Excel (Pivot Tables, VLOOKUP/XLOOKUP, IF),
+Data Cleaning, Charts
 </p>
 </div>
 
@@ -256,22 +252,24 @@ Python, C, C++, Java
 <div class="card">
 <h3>AWS Cloud Architecture</h3>
 <p>
-Designed cloud architecture using EC2, S3, IAM and VPC to deploy
-a secure web application environment on AWS.
+Designed cloud architecture using EC2, S3, IAM and VPC
+to deploy secure web applications.
 </p>
 </div>
 
 <div class="card">
 <h3>Diabetic Detection ML Model</h3>
 <p>
-Built a classification model using patient diagnostic data to identify diabetes risk using Scikit-learn.
+Built a machine learning model using Scikit-learn
+to detect diabetes risk.
 </p>
 </div>
 
 <div class="card">
 <h3>E-commerce Sales Analysis</h3>
 <p>
-Performed EDA and created visualizations to identify trends in customer behavior and sales performance.
+Performed EDA and created visualizations
+to analyze customer behaviour and sales trends.
 </p>
 </div>
 
@@ -291,12 +289,11 @@ Phone: +91 8237642318
 <br><br>
 
 <i class="fa-solid fa-envelope"></i>
-Email: pshivsharne@gmail.com
+Email: <a href="mailto:pshivsharne@gmail.com" style="color:#38bdf8">pshivsharne@gmail.com</a>
 
 <br><br>
 
 <i class="fa-brands fa-linkedin"></i>
-
 <a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" style="color:#38bdf8">
 LinkedIn Profile
 </a>
@@ -305,14 +302,12 @@ LinkedIn Profile
 
 </section>
 
-<section style="text-align:center;padding:35px">
+<section style="text-align:center;padding:30px">
 
 <h2 style="color:#38bdf8">
-
 I am open to collaborating on Data Analytics, Machine Learning,
 and Cloud-based projects. If anyone is interested,
 please feel free to reach out via LinkedIn or email.
-
 </h2>
 
 </section>
@@ -325,8 +320,9 @@ please feel free to reach out via LinkedIn or email.
 
 <script>
 
-new Typed("#typing",{
+document.addEventListener("DOMContentLoaded", function(){
 
+new Typed("#typing",{
 strings:[
 "Data Analyst",
 "Data Scientist",
@@ -334,32 +330,26 @@ strings:[
 "Power BI Specialist",
 "AWS Enthusiast"
 ],
-
 typeSpeed:60,
 backSpeed:40,
 loop:true
-
 });
 
 new Typed("#techTyping",{
-
 strings:[
 "Data Analytics & ML | Visualization & GIS | Databases | Excel & Reporting | Cloud & Tools | Programming Languages"
 ],
-
 typeSpeed:40,
 showCursor:true
-
 });
 
 new Typed("#softTyping",{
-
 strings:[
 "Analytical Thinking — Collaborator — Problem Solving — Attention to Detail"
 ],
-
-typeSpeed:30,
+typeSpeed:35,
 showCursor:true
+});
 
 });
 
