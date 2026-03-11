@@ -9,7 +9,6 @@
 
 <title>Pratiksha Shivsharne Portfolio</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 <style>
@@ -26,8 +25,7 @@ color:white;
 nav{
 display:flex;
 justify-content:space-between;
-align-items:center;
-padding:18px 10%;
+padding:20px 10%;
 background:#020617;
 }
 
@@ -44,7 +42,7 @@ font-size:14px;
 display:flex;
 align-items:center;
 justify-content:center;
-padding:40px 10%;
+padding:50px 10%;
 gap:40px;
 flex-wrap:wrap;
 }
@@ -62,7 +60,6 @@ margin:0;
 
 #typing{
 color:#38bdf8;
-font-weight:bold;
 }
 
 .btn{
@@ -76,24 +73,19 @@ text-decoration:none;
 font-weight:bold;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 .section{
-padding:40px 10%;
+padding:50px 10%;
 }
 
 .section h2{
 text-align:center;
-font-size:30px;
 margin-bottom:30px;
+font-size:30px;
 }
 
 /* SKILL BUTTONS */
-
-.skill-buttons{
-text-align:center;
-margin-bottom:35px;
-}
 
 .skill-btn{
 display:inline-block;
@@ -101,15 +93,13 @@ background:#38bdf8;
 color:black;
 padding:10px 18px;
 border-radius:6px;
-margin:8px;
+margin:6px;
 font-size:14px;
 font-weight:bold;
-transition:0.3s;
 }
 
 .skill-btn:hover{
 background:#0ea5e9;
-transform:scale(1.05);
 cursor:pointer;
 }
 
@@ -126,22 +116,12 @@ background:#1e293b;
 padding:25px;
 border-radius:10px;
 text-align:center;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 20px rgba(0,0,0,0.4);
 }
 
 .card img{
 width:100%;
 border-radius:8px;
 margin-bottom:12px;
-}
-
-.card h3{
-color:white;
 }
 
 .skill-text{
@@ -156,9 +136,9 @@ line-height:1.6;
 text-align:center;
 }
 
-.contact i{
+.contact a{
 color:#38bdf8;
-margin-right:8px;
+text-decoration:none;
 }
 
 footer{
@@ -168,10 +148,6 @@ background:#020617;
 }
 
 #typing-skills{
-color:#38bdf8;
-}
-
-#typing-soft{
 color:#38bdf8;
 }
 
@@ -185,14 +161,16 @@ color:#38bdf8;
 
 <nav>
 
-<h2>Pratiksha Shivsharne</h2>
+<h2>Pratiksha</h2>
 
 <div>
+
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#certifications">Certificates</a>
 <a href="#contact">Contact</a>
+
 </div>
 
 </nav>
@@ -225,29 +203,29 @@ Download Resume
 
 <h2>About Me</h2>
 
-<p style="max-width:700px;margin:auto;text-align:center">
+<p style="text-align:center;max-width:700px;margin:auto">
 
-Enthusiastic Data Analyst with hands-on experience in data analysis using Python, SQL, Advanced Excel, Power BI, and Tableau. 
-Strong understanding of data cleaning, exploratory data analysis (EDA), and dashboard creation.
-Familiar with AWS cloud services including EC2, IAM, S3, RDS, and VPC.
-Quick learner with strong analytical thinking and a passion for turning data into actionable insights.
+Enthusiastic Data Analyst with hands-on experience in Python, SQL,
+Advanced Excel, Power BI and Tableau.
+Passionate about transforming data into meaningful insights
+and building Machine Learning models.
 
 </p>
 
 </section>
 
 
-<!-- SKILLS -->
+<!-- TECHNICAL SKILLS -->
 
 <section class="section" id="skills">
 
 <h2>Technical Skills</h2>
 
-<h3 style="text-align:center;margin-bottom:20px;">
+<h3 style="text-align:center;margin-bottom:25px;">
 <span id="typing-skills"></span>
 </h3>
 
-<div class="skill-buttons">
+<div style="text-align:center;margin-bottom:40px;">
 
 <span class="skill-btn">Data Analytics & ML</span>
 <span class="skill-btn">Visualization & GIS</span>
@@ -261,73 +239,49 @@ Quick learner with strong analytical thinking and a passion for turning data int
 <div class="cards">
 
 <div class="card">
-
 <h3>Data Analytics & ML</h3>
-
 <p class="skill-text">
-Python (Pandas, NumPy), Scikit-learn, TensorFlow,
-EDA, Statistical Analysis,
-NLP (spaCy)
+Python (Pandas, NumPy), Scikit-learn, Basic TensorFlow,
+Statistical Analysis, Exploratory Data Analysis (EDA),
+Natural Language Processing (spaCy)
 </p>
-
 </div>
 
 <div class="card">
-
 <h3>Visualization & GIS</h3>
-
 <p class="skill-text">
-Power BI, Tableau,
-GeoPandas, QGIS,
-Google Earth Engine
+Power BI, Tableau, GeoPandas, QGIS, Google Earth Engine
 </p>
-
 </div>
 
 <div class="card">
-
 <h3>Databases</h3>
-
 <p class="skill-text">
 MySQL, SQL
 </p>
-
 </div>
 
 <div class="card">
-
 <h3>Excel & Reporting</h3>
-
 <p class="skill-text">
-Advanced Excel,
-Pivot Tables,
-VLOOKUP, XLOOKUP,
-IF Functions, Charts
+Advanced Excel (Pivot Tables, VLOOKUP/XLOOKUP, IF functions,
+Data Cleaning, Charts)
 </p>
-
 </div>
 
 <div class="card">
-
 <h3>Cloud & Tools</h3>
-
 <p class="skill-text">
-AWS EC2, IAM, S3,
-RDS, VPC,
-Git, GitHub,
-Jupyter Notebook, VS Code
+AWS (EC2, IAM, S3, RDS, VPC),
+Git, GitHub, Jupyter Notebook, VS Code
 </p>
-
 </div>
 
 <div class="card">
-
 <h3>Programming Languages</h3>
-
 <p class="skill-text">
 Python, C, C++, Java
 </p>
-
 </div>
 
 </div>
@@ -349,7 +303,7 @@ Python, C, C++, Java
 
 <h3>AWS Cloud Architecture</h3>
 
-<p>Designed a cloud architecture integrating EC2 (compute), S3 (storage), IAM (security), and VPC (networking) to deploy a secure web application environment on AWS.</p>
+<p>Designed scalable AWS cloud infrastructure using EC2, S3, IAM and VPC.</p>
 
 </div>
 
@@ -359,9 +313,7 @@ Python, C, C++, Java
 
 <h3>Diabetes Detection ML</h3>
 
-<p>Developed a predictive classification model using patient diagnostic data to identify diabetes risk;
-  performed data cleaning and exploratory data analysis (EDA) with Pandas, built and trained the model using Scikit-learn, 
-  and evaluated performance using Accuracy and Recall with a focus on reducing false negatives.</p>
+<p>Machine learning model to predict diabetes risk using Python.</p>
 
 </div>
 
@@ -371,10 +323,7 @@ Python, C, C++, Java
 
 <h3>E-commerce Sales Analysis</h3>
 
-<p>Built an end-to-end e-commerce data analysis project using Python. 
-  Cleaned and analyzed real-world sales data, performed EDA, 
-  and created visualizations to identify trends in customer behavior, sales performance, and delivery efficiency.
-  Generated business insights to support data-driven decisions.</p>
+<p>Analyzed e-commerce sales data to identify trends and insights.</p>
 
 </div>
 
@@ -393,20 +342,35 @@ Python, C, C++, Java
 
 <div class="card">
 <img src="aws_certificate.png">
-<h3>AWS Academy Cloud Foundations</h3>
+<h3>AWS Cloud Foundations</h3>
 </div>
 
 <div class="card">
 <img src="datascience_certificate.png">
-<h3>Advanced Course in Data Science</h3>
+<h3>Advanced Data Science</h3>
 </div>
 
 <div class="card">
 <img src="projit_certificate.png">
-<h3>PROJIT National Level Competition</h3>
+<h3>PROJIT National Competition</h3>
 </div>
 
 </div>
+
+</section>
+
+
+<!-- COLLABORATION -->
+
+<section style="text-align:center;padding:40px">
+
+<h2 style="color:#38bdf8">
+
+I am open to collaborating on Data Analytics, Machine Learning,
+and Cloud-based projects. If anyone is interested,
+please feel free to reach out via LinkedIn or email.
+
+</h2>
 
 </section>
 
@@ -419,17 +383,13 @@ Python, C, C++, Java
 
 <p>
 
-<i class="fa-solid fa-phone"></i> 8237642318
+Phone : 8237642318  
 <br><br>
 
-<i class="fa-solid fa-envelope"></i> pshivsharne@gmail.com
+Email : pshivsharne@gmail.com  
 <br><br>
 
-<i class="fa-brands fa-linkedin"></i>
-
-<a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" style="color:#38bdf8">
-LinkedIn Profile
-</a>
+<a href="https://www.linkedin.com">LinkedIn Profile</a>
 
 </p>
 
@@ -445,31 +405,36 @@ LinkedIn Profile
 </footer>
 
 
-<!-- TYPING SCRIPTS -->
+<!-- TYPING SCRIPT -->
 
 <script>
 
 var typed = new Typed("#typing",{
+
 strings:[
 "Data Analyst",
-"Power BI Specialist",
-"AI / ML Enthusiast",
+"Machine Learning Enthusiast",
 "AWS Cloud Enthusiast"
 ],
-typeSpeed:30,
-backSpeed:15,
+
+typeSpeed:60,
+backSpeed:40,
 loop:true
+
 });
 
 
 var typedSkills = new Typed("#typing-skills",{
+
 strings:[
-"Data Analytics & ML | Visualization & GIS | Databases | Excel & Reporting | Cloud & Tools | Programming Languages"
+"Cloud & Tools | Data Analytics & ML | Visualization & GIS | Databases | Excel & Reporting | Programming Languages"
 ],
-typeSpeed:25,
-backSpeed:15,
+
+typeSpeed:35,
+backSpeed:20,
 backDelay:2000,
 loop:true
+
 });
 
 </script>
