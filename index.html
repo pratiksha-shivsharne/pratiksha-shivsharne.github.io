@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -9,7 +10,6 @@
 <title>Pratiksha Shivsharne Portfolio</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 <style>
@@ -78,13 +78,13 @@ color:black;
 padding:10px 20px;
 border-radius:6px;
 font-weight:bold;
-margin-bottom:30px;
+margin-bottom:20px;
 }
 
 .skill-btn{
 display:inline-block;
-background:#22c55e;
-color:white;
+background:#38bdf8;
+color:black;
 padding:8px 16px;
 border-radius:6px;
 font-weight:bold;
@@ -110,17 +110,14 @@ border-radius:10px;
 text-align:center;
 }
 
-.card img{
-width:100%;
-border-radius:8px;
-margin-bottom:15px;
-}
-
-.certificate img{
-height:180px;
-object-fit:contain;
-background:white;
-padding:10px;
+.typing-line{
+display:inline-block;
+background:#38bdf8;
+color:black;
+padding:10px 20px;
+border-radius:6px;
+font-weight:bold;
+margin-top:10px;
 }
 
 .contact i{
@@ -160,7 +157,6 @@ background:#020617;
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
-<a href="#certifications">Certificates</a>
 <a href="#contact">Contact</a>
 </div>
 
@@ -209,6 +205,10 @@ Quick learner with strong analytical thinking and a passion for turning data int
 <section class="section" id="skills">
 
 <h2 class="heading-btn">Technical Skills</h2>
+
+<p class="typing-line">
+<span id="techskills"></span>
+</p>
 
 <div class="cards">
 
@@ -261,7 +261,7 @@ Python, C, C++, Java
 
 <h2 class="heading-btn" style="margin-top:60px">Soft Skills</h2>
 
-<p>
+<p class="typing-line">
 <span id="softskills"></span>
 </p>
 
@@ -274,92 +274,31 @@ Python, C, C++, Java
 <div class="cards">
 
 <div class="card">
-
-<img src="aws_cloud_project.png">
-
 <h3>AWS Cloud Architecture</h3>
-
 <p>
 Designed cloud architecture using EC2, S3, IAM and VPC to deploy a secure web application environment on AWS.
 </p>
-
 </div>
 
 <div class="card">
-
-<img src="diabetes_ml_project.png">
-
 <h3>Diabetic Detection ML Model</h3>
-
 <p>
 Built a predictive ML model using Python and Scikit-learn to detect diabetes risk.
 </p>
-
 </div>
 
 <div class="card">
-
-<img src="olist_dashboard.png">
-
 <h3>E-commerce Sales Analysis</h3>
-
 <p>
 Analyzed e-commerce sales data using Python and created dashboards to generate insights.
 </p>
-
 </div>
 
 </div>
 
 </section>
 
-<section class="section" id="certifications">
-
-<h2 class="heading-btn">Certifications</h2>
-
-<div class="cards">
-
-<div class="card certificate">
-
-<img src="aws_certificate.png">
-
-<h3>AWS Academy Cloud Foundations</h3>
-
-<a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" class="btn">
-View Certificate
-</a>
-
-</div>
-
-<div class="card certificate">
-
-<img src="datascience_certificate.png">
-
-<h3>Advanced Course in Data Science</h3>
-
-<a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" class="btn">
-View Certificate
-</a>
-
-</div>
-
-<div class="card certificate">
-
-<img src="projit_certificate.png">
-
-<h3>PROJIT National Level Competition</h3>
-
-<a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" class="btn">
-View Certificate
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section" id="contact">
+<section class="section contact" id="contact">
 
 <h2 class="heading-btn">Contact</h2>
 
@@ -371,7 +310,10 @@ Phone: +91 8237642318
 <br><br>
 
 <i class="fa-solid fa-envelope"></i>
-Email: pshivsharne@gmail.com
+Email: 
+<a href="mailto:pshivsharne@gmail.com" style="color:#38bdf8">
+pshivsharne@gmail.com
+</a>
 
 <br><br>
 
@@ -385,7 +327,7 @@ LinkedIn Profile
 
 </section>
 
-<section style="text-align:center;padding:40px 10%;background:#0f172a">
+<section style="text-align:center;padding:40px 10%">
 
 <h3 style="color:#38bdf8">
 🤝 Open for Collaboration
@@ -408,8 +350,7 @@ If anyone is interested, please feel free to reach out via LinkedIn or email.
 
 <script>
 
-var typed = new Typed("#typing",{
-
+new Typed("#typing",{
 strings:[
 "Data Analyst",
 "Data Scientist",
@@ -417,26 +358,25 @@ strings:[
 "Power BI Specialist",
 "AWS Enthusiast"
 ],
-
 typeSpeed:60,
 backSpeed:40,
 loop:true
-
 });
 
-var softskills = new Typed("#softskills",{
-
+new Typed("#techskills",{
 strings:[
-"Analytical Thinking",
-"Collaboration",
-"Problem Solving",
-"Attention to Detail"
+"Data Analytics & ML | Visualization & GIS | Databases | Excel & Reporting | Cloud & Tools | Programming Language"
 ],
+typeSpeed:50,
+showCursor:true
+});
 
-typeSpeed:60,
-backSpeed:40,
-loop:true
-
+new Typed("#softskills",{
+strings:[
+"Analytical Thinking — Collaboration — Problem Solving — Attention to Detail"
+],
+typeSpeed:50,
+showCursor:true
 });
 
 </script>
