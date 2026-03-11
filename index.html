@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -71,36 +70,20 @@ text-decoration:none;
 font-weight:bold;
 }
 
-.heading-btn{
-display:inline-block;
-background:#38bdf8;
-color:black;
-padding:10px 20px;
-border-radius:6px;
-font-weight:bold;
-margin-bottom:20px;
-}
-
-.skill-btn{
-display:inline-block;
-background:#38bdf8;
-color:black;
-padding:8px 16px;
-border-radius:6px;
-font-weight:bold;
-margin-bottom:15px;
-}
-
 .section{
 padding:70px 10%;
+}
+
+.section h2{
 text-align:center;
+font-size:32px;
+margin-bottom:40px;
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
-margin-top:30px;
 }
 
 .card{
@@ -110,31 +93,26 @@ border-radius:10px;
 text-align:center;
 }
 
-.typing-line{
+.card img{
+width:100%;
+border-radius:8px;
+margin-bottom:15px;
+}
+
+.skill-btn{
 display:inline-block;
 background:#38bdf8;
 color:black;
-padding:10px 20px;
+padding:10px 18px;
 border-radius:6px;
+margin:6px;
 font-weight:bold;
-margin-top:10px;
 }
 
-.contact i{
+#typing2{
 color:#38bdf8;
-margin-right:10px;
-}
-
-.blink-text{
 font-weight:bold;
-color:#38bdf8;
-animation: blink 1.5s infinite;
-}
-
-@keyframes blink{
-0%{opacity:1;}
-50%{opacity:0;}
-100%{opacity:1;}
+font-size:20px;
 }
 
 footer{
@@ -157,6 +135,7 @@ background:#020617;
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
+<a href="#certifications">Certificates</a>
 <a href="#contact">Contact</a>
 </div>
 
@@ -172,10 +151,6 @@ background:#020617;
 
 <h2>I am a <span id="typing"></span></h2>
 
-<p>
-Passionate about Data Analytics, Machine Learning and Cloud Technologies.
-</p>
-
 <a href="Pratiksha_Shivsharne_Resume.pdf" download class="btn">
 Download Resume
 </a>
@@ -186,17 +161,13 @@ Download Resume
 
 <section class="section" id="about">
 
-<h2 class="heading-btn">About Me</h2>
+<h2>About Me</h2>
 
-<p style="max-width:700px;margin:auto">
+<p style="max-width:700px;margin:auto;text-align:center">
 
-Enthusiastic Data Analyst with hands-on experience in data analysis using Python, SQL, Advanced Excel, Power BI, and Tableau.
-
-Strong understanding of data cleaning, exploratory data analysis (EDA), and dashboard creation.
-
-Familiar with AWS cloud services including EC2, IAM, S3, RDS, and VPC.
-
-Quick learner with strong analytical thinking and a passion for turning data into actionable insights.
+Enthusiastic Data Analyst with hands-on experience in Python, SQL,
+Advanced Excel, Power BI and Tableau. Passionate about turning
+data into insights and building ML models.
 
 </p>
 
@@ -204,11 +175,7 @@ Quick learner with strong analytical thinking and a passion for turning data int
 
 <section class="section" id="skills">
 
-<h2 class="heading-btn">Technical Skills</h2>
-
-<p class="typing-line">
-<span id="techskills"></span>
-</p>
+<h2>Technical Skills</h2>
 
 <div class="cards">
 
@@ -259,39 +226,72 @@ Python, C, C++, Java
 
 </div>
 
-<h2 class="heading-btn" style="margin-top:60px">Soft Skills</h2>
+<br><br>
 
-<p class="typing-line">
-<span id="softskills"></span>
-</p>
+<h2>Soft Skills</h2>
+
+<h3 style="text-align:center">
+<span id="typing2"></span>
+</h3>
 
 </section>
 
 <section class="section" id="projects">
 
-<h2 class="heading-btn">Projects</h2>
+<h2>Projects</h2>
 
 <div class="cards">
 
 <div class="card">
+<img src="aws_cloud_project.png">
 <h3>AWS Cloud Architecture</h3>
 <p>
-Designed cloud architecture using EC2, S3, IAM and VPC to deploy a secure web application environment on AWS.
+Designed cloud architecture using EC2, S3, IAM and VPC
+to deploy secure web applications.
 </p>
 </div>
 
 <div class="card">
-<h3>Diabetic Detection ML Model</h3>
+<img src="diabetes_ml_project.png">
+<h3>Diabetes Detection ML Model</h3>
 <p>
-Built a predictive ML model using Python and Scikit-learn to detect diabetes risk.
+Built a classification model using Python and
+Scikit-learn to detect diabetes risk.
 </p>
 </div>
 
 <div class="card">
+<img src="olist_dashboard.png">
 <h3>E-commerce Sales Analysis</h3>
 <p>
-Analyzed e-commerce sales data using Python and created dashboards to generate insights.
+Performed EDA on real-world e-commerce data
+and generated insights using Python.
 </p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="certifications">
+
+<h2>Certifications</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="aws_certificate.png">
+<h3>AWS Academy Cloud Foundations</h3>
+</div>
+
+<div class="card">
+<img src="datascience_certificate.png">
+<h3>Advanced Course in Data Science</h3>
+</div>
+
+<div class="card">
+<img src="projit_certificate.png">
+<h3>PROJIT National Level Competition</h3>
 </div>
 
 </div>
@@ -300,20 +300,16 @@ Analyzed e-commerce sales data using Python and created dashboards to generate i
 
 <section class="section contact" id="contact">
 
-<h2 class="heading-btn">Contact</h2>
+<h2>Contact</h2>
 
-<p>
+<p style="text-align:center">
 
-<i class="fa-solid fa-phone"></i>
-Phone: +91 8237642318
+<i class="fa-solid fa-phone"></i> +91 8237642318
 
 <br><br>
 
-<i class="fa-solid fa-envelope"></i>
-Email: 
-<a href="mailto:pshivsharne@gmail.com" style="color:#38bdf8">
-pshivsharne@gmail.com
-</a>
+<i class="fa-solid fa-envelope"></i> <a href="mailto:pshivsharne@gmail.com" style="color:#38bdf8">
+[pshivsharne@gmail.com](mailto:pshivsharne@gmail.com) </a>
 
 <br><br>
 
@@ -327,18 +323,15 @@ LinkedIn Profile
 
 </section>
 
-<section style="text-align:center;padding:40px 10%">
+<section style="text-align:center;padding:40px">
 
-<h3 style="color:#38bdf8">
-🤝 Open for Collaboration
-</h3>
+<h2 style="color:#38bdf8">
 
-<p class="blink-text">
+I am open to collaborating on Data Analytics, Machine Learning,
+and Cloud-based projects. If anyone is interested,
+please feel free to reach out via LinkedIn or email.
 
-I am open to collaborating on Data Analytics, Machine Learning, and Cloud-based projects.
-If anyone is interested, please feel free to reach out via LinkedIn or email.
-
-</p>
+</h2>
 
 </section>
 
@@ -350,7 +343,8 @@ If anyone is interested, please feel free to reach out via LinkedIn or email.
 
 <script>
 
-new Typed("#typing",{
+var typed = new Typed("#typing",{
+
 strings:[
 "Data Analyst",
 "Data Scientist",
@@ -358,25 +352,23 @@ strings:[
 "Power BI Specialist",
 "AWS Enthusiast"
 ],
+
 typeSpeed:60,
 backSpeed:40,
 loop:true
+
 });
 
-new Typed("#techskills",{
-strings:[
-"Data Analytics & ML | Visualization & GIS | Databases | Excel & Reporting | Cloud & Tools | Programming Language"
-],
-typeSpeed:50,
-showCursor:true
-});
+var typed2 = new Typed("#typing2",{
 
-new Typed("#softskills",{
 strings:[
 "Analytical Thinking — Collaboration — Problem Solving — Attention to Detail"
 ],
+
 typeSpeed:50,
-showCursor:true
+backSpeed:30,
+loop:true
+
 });
 
 </script>
