@@ -1,7 +1,5 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -9,6 +7,7 @@
 
 <title>Pratiksha Shivsharne Portfolio</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 <style>
@@ -20,11 +19,10 @@ background:#0f172a;
 color:white;
 }
 
-/* NAVBAR */
-
 nav{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:15px 8%;
 background:#020617;
 }
@@ -33,33 +31,31 @@ nav a{
 color:white;
 margin-left:18px;
 text-decoration:none;
-font-size:14px;
 }
-
-/* HERO */
 
 .hero{
 display:flex;
 align-items:center;
 justify-content:center;
-padding:35px 8%;
-gap:30px;
+padding:60px 8%;
+gap:40px;
 flex-wrap:wrap;
 }
 
 .hero img{
-width:180px;
+width:200px;
 border-radius:50%;
 border:4px solid #38bdf8;
 }
 
 .hero h1{
-font-size:34px;
+font-size:38px;
 margin:0;
 }
 
 #typing{
 color:#38bdf8;
+font-weight:bold;
 }
 
 .btn{
@@ -73,36 +69,27 @@ text-decoration:none;
 font-weight:bold;
 }
 
-/* SECTIONS */
-
 .section{
-padding:35px 8%;
+padding:55px 8%;
 }
 
 .section h2{
 text-align:center;
-margin-bottom:15px;
+font-size:30px;
+margin-bottom:25px;
 }
-
-/* CARDS */
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px;
 }
 
 .card{
 background:#1e293b;
-padding:20px;
+padding:18px;
 border-radius:10px;
 text-align:center;
-}
-
-.card img{
-width:100%;
-border-radius:6px;
-margin-bottom:10px;
 }
 
 .card h3{
@@ -110,39 +97,33 @@ color:#38bdf8;
 margin-bottom:10px;
 }
 
-.skill-text{
-color:white;
-font-size:14px;
-line-height:1.5;
-}
+.typing-box{
 
-/* CONTACT */
+background:#38bdf8;
+color:white;
+font-weight:bold;
+padding:10px 18px;
+border-radius:6px;
+display:block;
+margin:15px auto;
+text-align:center;
+width:max-content;
+
+}
 
 .contact{
 text-align:center;
 }
 
-.contact a{
+.contact i{
 color:#38bdf8;
-text-decoration:none;
+margin-right:8px;
 }
-
-/* COLLAB */
-
-.collab{
-text-align:center;
-padding:25px 8%;
-color:#38bdf8;
-font-size:18px;
-}
-
-/* FOOTER */
 
 footer{
 text-align:center;
-padding:15px;
+padding:20px;
 background:#020617;
-font-size:14px;
 }
 
 </style>
@@ -151,26 +132,19 @@ font-size:14px;
 
 <body>
 
-<!-- NAVBAR -->
-
 <nav>
 
 <h2>Pratiksha</h2>
 
 <div>
-
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#certifications">Certificates</a>
 <a href="#contact">Contact</a>
-
 </div>
 
 </nav>
-
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -182,6 +156,10 @@ font-size:14px;
 
 <h2>I am a <span id="typing"></span></h2>
 
+<p>
+Passionate about Data Analytics, Machine Learning and Cloud Technologies.
+</p>
+
 <a href="Pratiksha_Shivsharne_Resume.pdf" download class="btn">
 Download Resume
 </a>
@@ -190,37 +168,30 @@ Download Resume
 
 </section>
 
-
-<!-- ABOUT -->
-
 <section class="section" id="about">
 
 <h2>About Me</h2>
 
-<p style="text-align:center;max-width:650px;margin:auto">
-
-Enthusiastic Data Analyst with hands-on experience in Python, SQL,
-Advanced Excel, Power BI and Tableau. Passionate about transforming
-data into meaningful insights and building Machine Learning models.
-
+<p style="max-width:700px;margin:auto;text-align:center">
+Enthusiastic Data Analyst with hands-on experience in data analysis using Python, SQL, Advanced Excel, Power BI, and Tableau. 
+Strong understanding of data cleaning, exploratory data analysis (EDA), and dashboard creation.
+Familiar with AWS cloud services including EC2, IAM, S3, RDS, and VPC.
+Quick learner with strong analytical thinking and a passion for turning data into actionable insights.
 </p>
 
 </section>
-
-
-<!-- TECHNICAL SKILLS -->
 
 <section class="section" id="skills">
 
 <h2>Technical Skills</h2>
 
-<p id="techTyping" style="text-align:center;color:#38bdf8;font-size:18px;margin-bottom:25px;"></p>
+<div id="techTyping" class="typing-box"></div>
 
 <div class="cards">
 
 <div class="card">
 <h3>Data Analytics & ML</h3>
-<p class="skill-text">
+<p>
 Python (Pandas, NumPy), Scikit-learn, Basic TensorFlow,
 Statistical Analysis, Exploratory Data Analysis (EDA),
 Natural Language Processing (spaCy)
@@ -229,21 +200,21 @@ Natural Language Processing (spaCy)
 
 <div class="card">
 <h3>Visualization & GIS</h3>
-<p class="skill-text">
+<p>
 Power BI, Tableau, GeoPandas, QGIS, Google Earth Engine
 </p>
 </div>
 
 <div class="card">
 <h3>Databases</h3>
-<p class="skill-text">
+<p>
 MySQL, SQL
 </p>
 </div>
 
 <div class="card">
 <h3>Excel & Reporting</h3>
-<p class="skill-text">
+<p>
 Advanced Excel (Pivot Tables, VLOOKUP/XLOOKUP, IF functions,
 Data Cleaning, Charts)
 </p>
@@ -251,15 +222,15 @@ Data Cleaning, Charts)
 
 <div class="card">
 <h3>Cloud & Tools</h3>
-<p class="skill-text">
-AWS (EC2, IAM, S3, RDS, VPC),
-Git, GitHub, Jupyter Notebook, VS Code
+<p>
+AWS (EC2, IAM, S3, RDS, VPC), Git, GitHub,
+Jupyter Notebook, VS Code
 </p>
 </div>
 
 <div class="card">
 <h3>Programming Languages</h3>
-<p class="skill-text">
+<p>
 Python, C, C++, Java
 </p>
 </div>
@@ -268,19 +239,13 @@ Python, C, C++, Java
 
 </section>
 
-
-<!-- SOFT SKILLS -->
-
-<section class="section" id="softskills">
+<section class="section">
 
 <h2>Soft Skills</h2>
 
-<p id="softTyping" style="text-align:center;color:#38bdf8;font-size:18px;"></p>
+<div id="softTyping" class="typing-box"></div>
 
 </section>
-
-
-<!-- PROJECTS -->
 
 <section class="section" id="projects">
 
@@ -289,69 +254,30 @@ Python, C, C++, Java
 <div class="cards">
 
 <div class="card">
-
-<img src="aws_cloud_project.png">
-
 <h3>AWS Cloud Architecture</h3>
-
-<p>Designed scalable AWS infrastructure using EC2, S3 and VPC.</p>
-
+<p>
+Designed cloud architecture using EC2, S3, IAM and VPC to deploy
+a secure web application environment on AWS.
+</p>
 </div>
 
 <div class="card">
-
-<img src="diabetes_ml_project.png">
-
-<h3>Diabetes Detection ML</h3>
-
-<p>Machine learning model predicting diabetes risk.</p>
-
+<h3>Diabetic Detection ML Model</h3>
+<p>
+Built a classification model using patient diagnostic data to identify diabetes risk using Scikit-learn.
+</p>
 </div>
 
 <div class="card">
-
-<img src="olist_dashboard.png">
-
-<h3>E-commerce Analysis</h3>
-
-<p>Analyzed e-commerce sales data to identify trends.</p>
-
+<h3>E-commerce Sales Analysis</h3>
+<p>
+Performed EDA and created visualizations to identify trends in customer behavior and sales performance.
+</p>
 </div>
 
 </div>
 
 </section>
-
-
-<!-- CERTIFICATIONS -->
-
-<section class="section" id="certifications">
-
-<h2>Certifications</h2>
-
-<div class="cards">
-
-<div class="card">
-<img src="aws_certificate.png">
-<h3>AWS Cloud Foundations</h3>
-</div>
-
-<div class="card">
-<img src="datascience_certificate.png">
-<h3>Advanced Data Science</h3>
-</div>
-
-<div class="card">
-<img src="projit_certificate.png">
-<h3>PROJIT National Competition</h3>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
 
 <section class="section contact" id="contact">
 
@@ -359,29 +285,37 @@ Python, C, C++, Java
 
 <p>
 
-Phone : 8237642318
+<i class="fa-solid fa-phone"></i>
+Phone: +91 8237642318
+
 <br><br>
 
-Email : pshivsharne@gmail.com
+<i class="fa-solid fa-envelope"></i>
+Email: pshivsharne@gmail.com
+
 <br><br>
 
-<a href="https://www.linkedin.com">LinkedIn Profile</a>
+<i class="fa-brands fa-linkedin"></i>
+
+<a href="https://www.linkedin.com/in/pratiksha-shivsharne/" target="_blank" style="color:#38bdf8">
+LinkedIn Profile
+</a>
 
 </p>
 
 </section>
 
+<section style="text-align:center;padding:35px">
 
-<!-- COLLABORATION -->
-
-<section class="collab">
+<h2 style="color:#38bdf8">
 
 I am open to collaborating on Data Analytics, Machine Learning,
 and Cloud-based projects. If anyone is interested,
 please feel free to reach out via LinkedIn or email.
 
-</section>
+</h2>
 
+</section>
 
 <footer>
 
@@ -389,15 +323,16 @@ please feel free to reach out via LinkedIn or email.
 
 </footer>
 
-
 <script>
 
 new Typed("#typing",{
 
 strings:[
 "Data Analyst",
-"Machine Learning Enthusiast",
-"AWS Cloud Enthusiast"
+"Data Scientist",
+"AI / ML Enthusiast",
+"Power BI Specialist",
+"AWS Enthusiast"
 ],
 
 typeSpeed:60,
@@ -406,7 +341,6 @@ loop:true
 
 });
 
-
 new Typed("#techTyping",{
 
 strings:[
@@ -414,11 +348,9 @@ strings:[
 ],
 
 typeSpeed:40,
-backSpeed:0,
 showCursor:true
 
 });
-
 
 new Typed("#softTyping",{
 
@@ -426,8 +358,7 @@ strings:[
 "Analytical Thinking — Collaborator — Problem Solving — Attention to Detail"
 ],
 
-typeSpeed:25,
-backSpeed:0,
+typeSpeed:30,
 showCursor:true
 
 });
@@ -436,4 +367,3 @@ showCursor:true
 
 </body>
 </html>
-```
