@@ -473,29 +473,6 @@ footer .f-right { display: flex; gap: 1.5rem; }
 .chat-send { width: 34px; height: 34px; border-radius: 6px; background: var(--green); border: none; color: var(--bg); cursor: none; display: flex; align-items: center; justify-content: center; transition: all 0.2s; flex-shrink: 0; }
 .chat-send:hover { background: var(--green2); transform: scale(1.05); }
 .chat-send:disabled { background: var(--muted); opacity: 0.5; cursor: not-allowed; }
-
-/* chatbot formatted content */
-.chat-msg.bot .chat-heading {
-  color: var(--green);
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  font-size: 0.8rem;
-  letter-spacing: 0.05em;
-  text-shadow: 0 0 12px rgba(0,255,136,0.35);
-  margin: 0.6rem 0 0.25rem 0;
-  display: block;
-}
-.chat-msg.bot .chat-heading:first-child { margin-top: 0.2rem; }
-.chat-msg.bot .chat-item {
-  display: block;
-  color: var(--text);
-  padding: 0.15rem 0 0.15rem 0.75rem;
-  border-left: 2px solid rgba(0,255,136,0.25);
-  margin-bottom: 0.4rem;
-  line-height: 1.65;
-}
-.chat-msg.bot .chat-item:last-child { margin-bottom: 0; }
-.chat-msg.bot .chat-plain { display: block; margin-bottom: 0.3rem; }
 @media (max-width: 500px) {
   #ai-chat-panel { width: calc(100vw - 2rem); right: 1rem; bottom: 5.5rem; }
   #ai-chat-btn { bottom: 1.25rem; right: 1.25rem; }
@@ -1147,7 +1124,7 @@ PERSONALITY: Analytical thinker, problem solver, detail-oriented, good communica
 
 If asked why hire her: She has a proven internship track record, 96.86% ML accuracy in projects, a Best Project Award, AWS cloud knowledge, and covers the full data stack from EDA to deep learning to GenAI. She's a motivated fresh graduate ready to grow fast.
 
-Always respond in 2-5 sentences or use structured format with **Heading** on its own line followed by bullet points (- item) for lists. Use **bold** for project names and key terms. When listing projects or skills, always use bullet points with one item per line so they display clearly. Be warm, professional, and enthusiastic about Pratiksha's potential.`;
+Always respond in 2-4 short sentences. Be warm, professional, and enthusiastic about Pratiksha's potential.`;
 
 let chatHistory = [];
 let chatOpen = false;
@@ -1158,47 +1135,21 @@ function toggleChat() {
   if (chatOpen) setTimeout(() => document.getElementById('chatInput').focus(), 350);
 }
 
-function formatBotText(text) {
-  // Converts AI response into styled HTML:
-  // **Heading** → green heading
-  // - item / 1. item → indented bullet with left green border
-  // plain lines → normal text with spacing
-  const lines = text.split('\n');
-  let html = '';
-  lines.forEach(line => {
-    const trimmed = line.trim();
-    if (!trimmed) { html += '<span style="display:block;height:0.5rem;"></span>'; return; }
-    // **Heading** pattern
-    if (/^\*\*(.+)\*\*$/.test(trimmed)) {
-      const heading = trimmed.replace(/^\*\*|\*\*$/g, '');
-      html += `<span class="chat-heading">// ${heading}</span>`;
-      return;
-    }
-    // Bold inline **text** inside a line
-    const inlined = trimmed.replace(/\*\*(.+?)\*\*/g, '<strong style="color:var(--green)">$1</strong>');
-    // Bullet / numbered list item
-    if (/^[-•*]\s+/.test(trimmed) || /^\d+\.\s+/.test(trimmed)) {
-      const content = trimmed.replace(/^[-•*\d.]+\s+/, '');
-      const contentInlined = content.replace(/\*\*(.+?)\*\*/g, '<strong style="color:var(--green)">$1</strong>');
-      html += `<span class="chat-item">▸ ${contentInlined}</span>`;
-      return;
-    }
-    html += `<span class="chat-plain">${inlined}</span>`;
-  });
-  return html;
-}
-
 function addMessage(text, role) {
   const msgs = document.getElementById('chatMessages');
   const div = document.createElement('div');
   div.className = 'chat-msg ' + role;
   if (role === 'bot') {
-    div.innerHTML = '<div class="msg-label">▸ pratiksha.ai</div>' + formatBotText(text);
+    div.innerHTML = '<div class="msg-label">▸ pratiksha.ai</div>' + escapeHtml(text);
   } else {
     div.textContent = text;
   }
   msgs.appendChild(div);
   msgs.scrollTop = msgs.scrollHeight;
+}
+
+function escapeHtml(t) {
+  return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
 }
 
 function setTyping(show) {
@@ -1240,7 +1191,7 @@ async function processMessage(text) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
-        max_tokens: 500,
+        max_tokens: 300,
         system: PRATIKSHA_SYSTEM,
         messages: chatHistory
       })
