@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pratiksha Shivsharne — Data Analyst | AI Engineer | ML Engineer | Data Scientist</title>
+<title>Pratiksha Shivsharne — Data Analyst | AI Engineer | ML Engineer | Data Scientist | Power BI</title>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -119,13 +119,15 @@ nav {
 
 .hero-name {
   font-family: 'Syne', sans-serif; font-weight: 800;
-  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-size: clamp(2rem, 4vw, 3.2rem);
   line-height: 0.95; letter-spacing: -0.02em;
   margin-bottom: 0.5rem;
   animation: fadeUp 0.8s 0.1s ease both;
 }
-.hero-name .line1 { color: var(--text); }
-.hero-name .line2 { color: var(--green); text-shadow: 0 0 30px rgba(0,255,136,0.4); }
+.hero-name .line1 { display: none; }
+.hero-name .line2 { color: #ffffff; text-shadow: none; white-space: nowrap; }
+.hero-name .line2 .surname { color: var(--green); }
+@media (max-width: 640px) { .hero-name .line2 { white-space: normal; } }
 .hero-role {
   font-size: 0.82rem; color: var(--muted2); letter-spacing: 0.2em;
   text-transform: uppercase; margin-bottom: 2rem;
@@ -204,9 +206,17 @@ nav {
 }
 #role-cycler {
   display: inline-block;
-  color: var(--green);
-  font-weight: 500;
-  letter-spacing: 0.05em;
+  color: var(--yellow);
+  font-weight: 800;
+  font-family: 'Syne', sans-serif;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  border: 1.5px solid var(--yellow);
+  padding: 2px 12px;
+  border-radius: 4px;
+  background: rgba(255,215,0,0.08);
+  box-shadow: 0 0 8px rgba(255,215,0,0.5), inset 0 0 8px rgba(255,215,0,0.05);
+  text-shadow: 0 0 8px rgba(255,215,0,0.8);
   animation: rolePop 2.2s ease forwards;
 }
 
@@ -466,6 +476,25 @@ footer .f-right { display: flex; gap: 1.5rem; }
 .chat-suggestions { padding: 0 1rem 0.75rem; display: flex; flex-wrap: wrap; gap: 6px; flex-shrink: 0; }
 .chat-suggestion { font-size: 0.63rem; padding: 4px 11px; background: var(--bg4); border: 1px solid var(--border2); color: var(--muted2); border-radius: 20px; cursor: none; transition: all 0.2s; white-space: nowrap; }
 .chat-suggestion:hover { border-color: var(--green); color: var(--green); background: rgba(0,255,136,0.06); }
+.chat-type-cursor { display: inline-block; width: 6px; height: 1em; background: var(--green); vertical-align: middle; margin-left: 1px; animation: blink 0.8s step-end infinite; }
+.chat-msg.bot .msg-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.chat-msg.bot .msg-text { display: block; }
+.chat-msg.bot .msg-para { margin: 0 0 0.65rem 0; }
+.chat-msg.bot .msg-para:last-child { margin-bottom: 0; }
+.chat-msg.bot .msg-list { margin: 0.3rem 0 0.65rem 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.chat-msg.bot .msg-list:last-child { margin-bottom: 0; }
+.chat-msg.bot .msg-list li { padding-left: 0.2rem; }
+.chat-msg.bot .msg-list li::marker { color: var(--green); font-weight: 700; }
+.chat-msg.bot .msg-highlight { color: var(--green); font-weight: 700; background: rgba(0,255,136,0.08); padding: 1px 5px; border-radius: 3px; }
+.chat-msg.bot .msg-link-btn {
+  font-size: 0.66rem; padding: 5px 10px; border-radius: 5px;
+  background: rgba(0,255,136,0.08); border: 1px solid var(--border);
+  color: var(--green); text-decoration: none; display: inline-flex;
+  align-items: center; gap: 5px; transition: all 0.2s; cursor: none;
+}
+.chat-msg.bot .msg-link-btn:hover { background: var(--green); color: var(--bg); box-shadow: var(--glow); }
+.chat-msg.system { align-self: center; background: rgba(0,229,255,0.06); border: 1px solid rgba(0,229,255,0.25); color: var(--cyan); font-size: 0.7rem; border-radius: 20px; padding: 0.4rem 0.9rem; }
+.chat-header-sub .theme-hint { color: var(--cyan); cursor: none; }
 .chat-input-wrap { padding: 0.75rem 1rem; border-top: 1px solid var(--border2); display: flex; gap: 8px; align-items: center; background: var(--bg3); flex-shrink: 0; }
 .chat-input { flex: 1; background: var(--bg2); border: 1px solid var(--border2); border-radius: 6px; padding: 0.5rem 0.75rem; color: var(--text); font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; outline: none; transition: border-color 0.2s; cursor: text; }
 .chat-input::placeholder { color: var(--muted); }
@@ -508,7 +537,7 @@ footer .f-right { display: flex; gap: 1.5rem; }
     <li><a href="#experience">experience</a></li>
     <li><a href="#skills">skills</a></li>
     <li><a href="#projects">projects</a></li>
-    <li><a href="#certifications">certs</a></li>
+    <li><a href="#certifications">certifications</a></li>
     <li><a href="#contact">contact</a></li>
   </ul>
   <a href="Pratiksha_Shivsharne_Resume_.pdf" class="nav-cta" target="_blank">./resume.pdf</a>
@@ -525,8 +554,7 @@ footer .f-right { display: flex; gap: 1.5rem; }
         <span>bash — ~/pratiksha</span>
       </div>
       <div class="terminal-body">
-        <div class="t-line"><span class="t-prompt">pratiksha@portfolio:~$</span>&nbsp;<span class="t-cmd">whoami</span></div>
-        <div class="t-out"><span id="role-cycler"></span></div>
+        <div class="t-line" style="flex-wrap:nowrap; align-items:center;"><span class="t-prompt">pratiksha@portfolio:~$</span>&nbsp;<span class="t-cmd">whoami</span>&nbsp;&nbsp;<span id="role-cycler"></span></div>
         <div class="t-line"><span class="t-prompt">pratiksha@portfolio:~$</span>&nbsp;<span class="t-cmd">cat status.txt</span></div>
         <div class="t-out"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#00ff88;margin-right:6px;animation:pulse 2s infinite;vertical-align:middle;"></span><span>OPEN TO WORK</span> — entry-level &amp; fresher roles</div>
         <div class="t-line"><span class="t-prompt">pratiksha@portfolio:~$</span>&nbsp;<span class="t-cmd">python --achievement</span></div>
@@ -537,8 +565,7 @@ footer .f-right { display: flex; gap: 1.5rem; }
       </div>
     </div>
     <div class="hero-name">
-      <div class="line1">PRATIKSHA</div>
-      <div class="line2">SHIVSHARNE</div>
+      <div class="line2">PRATIKSHA <span class="surname">SHIVSHARNE</span></div>
     </div>
     <div class="hero-role">B.Tech IT &nbsp;<span>//</span>&nbsp; MIT-ADT University, Pune &nbsp;<span>//</span>&nbsp; 2026</div>
     <p class="hero-desc">
@@ -855,6 +882,42 @@ footer .f-right { display: flex; gap: 1.5rem; }
       </div>
     </div>
 
+
+    <!-- Project 5: Superstore Sales Dashboard -->
+    <div class="proj-card reveal reveal-d1">
+      <div class="proj-sidebar">
+        <div class="proj-num">05</div>
+        <div class="proj-lang">tool: <span>Power BI</span></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-meta">
+          <span class="proj-cat">// Data Analytics · Business Intelligence · Dashboard</span>
+          <span class="proj-acc">Power BI · 2-Page Report</span>
+        </div>
+        <h3>Superstore Sales Dashboard</h3>
+        <p>Interactive 2-page Power BI dashboard built on the Sample Superstore dataset to analyze sales performance, profit trends, and order insights. Page 1 — Sales Overview: KPI cards for Total Sales, Profit, Quantity &amp; Orders with breakdowns by Category, Region and Segment. Page 2 — Product Analysis: Top products by sales, profit by category, and interactive slicers for Category &amp; Region. Key finding: Technology leads in both sales and profit; West region generates highest revenue.</p>
+        <div class="proj-stack">
+          <span class="proj-tech">Power BI</span>
+          <span class="proj-tech">DAX</span>
+          <span class="proj-tech">CSV / Excel</span>
+          <span class="proj-tech">KPI Cards</span>
+          <span class="proj-tech">Data Visualization</span>
+          <span class="proj-tech">Business Intelligence</span>
+        </div>
+        <div class="proj-footer">
+          <div class="proj-highlights">
+            <span class="proj-hl">Pages: <strong>2 Dashboards</strong></span>
+            <span class="proj-hl">KPIs: <strong>Sales · Profit · Orders</strong></span>
+            <span class="proj-hl">Filters: <strong>Category · Region</strong></span>
+            <span class="proj-hl">Insight: <strong>Tech = #1 Category</strong></span>
+          </div>
+          <a href="https://github.com/pratiksha-shivsharne/Superstore-Sales-Dashboard" class="proj-link-btn" target="_blank">
+            view_repo →
+          </a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -862,7 +925,7 @@ footer .f-right { display: flex; gap: 1.5rem; }
 <section id="certifications">
   <div class="sec-header reveal">
     <div class="sec-eyebrow">05 — credentials</div>
-    <div class="sec-title">Certs &amp; <span>Achievements</span></div>
+    <div class="sec-title">Certification &amp; <span>Achievements</span></div>
     <div class="sec-line"></div>
   </div>
   <div class="certs-grid">
@@ -942,7 +1005,7 @@ footer .f-right { display: flex; gap: 1.5rem; }
       <div class="status-item">
         <div class="status-dot dot-cyan"></div>
         <span class="status-label">role_target</span>
-        <span class="status-val">Data Analyst / AI / ML</span>
+        <span class="status-val">Data Analyst / AI / ML / Data Science</span>
       </div>
       <div class="status-item">
         <div class="status-dot dot-yellow"></div>
@@ -992,7 +1055,7 @@ footer .f-right { display: flex; gap: 1.5rem; }
     </div>
     <div class="chat-header-info">
       <div class="chat-header-title">// ask_pratiksha.ai</div>
-      <div class="chat-header-sub">Powered by Claude · Ask anything about Pratiksha</div>
+      <div class="chat-header-sub">Ask anything · type <span class="theme-hint" onclick="document.getElementById('chatInput').value='/help';sendChat();">/help</span> for commands</div>
     </div>
     <button class="chat-close" onclick="toggleChat()">✕</button>
   </div>
@@ -1000,7 +1063,7 @@ footer .f-right { display: flex; gap: 1.5rem; }
   <div class="chat-messages" id="chatMessages">
     <div class="chat-msg bot">
       <div class="msg-label">▸ pratiksha.ai</div>
-      Hi! 👋 I'm an AI assistant for Pratiksha's portfolio. Ask me anything — her skills, projects, experience, or why she'd be a great hire!
+      Hi I'm an AI assistant for Pratiksha's portfolio. Ask me about her skills, projects, or experience — or try <strong>/resume</strong>, <strong>/github</strong>, or <strong>/theme cyan</strong> for a quick trick. 🎨
     </div>
   </div>
 
@@ -1079,7 +1142,7 @@ document.getElementById('heroImg').addEventListener('error', function() {
 });
 
 // ── AI CHATBOT ──
-const PRATIKSHA_SYSTEM = `You are an AI assistant embedded in Pratiksha Shivsharne's portfolio website. Answer questions about her professionally and enthusiastically. Keep responses concise (2-4 sentences max). Always be positive and highlight her strengths.
+const PRATIKSHA_SYSTEM = `You are "pratiksha.ai" — a warm, witty, sharp AI assistant embedded in Pratiksha Shivsharne's portfolio website. You sound like a proud, plain-spoken teammate who genuinely knows her work, not a generic corporate bot. Be concise (2-4 sentences), confident, and specific — lead with numbers and outcomes, not adjectives. Light personality is welcome (a little dry humor, the occasional emoji 🚀📊), but never overdo it. Always steer the conversation toward what makes Pratiksha a strong hire.
 
 KEY FACTS ABOUT PRATIKSHA:
 - Name: Pratiksha Shivsharne
@@ -1089,6 +1152,7 @@ KEY FACTS ABOUT PRATIKSHA:
 - Email: pshivsharne@gmail.com | Phone: +91 82376 42318
 - LinkedIn: linkedin.com/in/pratiksha-shivsharne | GitHub: github.com/pratiksha-shivsharne
 - Portfolio: pratiksha-shivsharne.github.io
+- Resume: downloadable directly from this site (nav bar "./resume.pdf" or the Contact section)
 
 INTERNSHIP:
 - Data Analyst Intern at Vitalsym Healthcare Pvt. Ltd., Pune (March–May 2026)
@@ -1096,11 +1160,12 @@ INTERNSHIP:
 - Built 10+ Power BI dashboards for clinical teams
 - Improved data quality by 33% through feature engineering and data cleaning
 
-PROJECTS:
-1. Diabetic Retinopathy Detection System — CNN-based deep learning app using TensorFlow/Keras classifying retinal images into 5 DR severity levels. Built Tkinter GUI with SQLite login. WON Best Project Award 2026 at MIT-ADT University.
-2. Spam Email Classifier — NLP pipeline using TF-IDF + Naive Bayes on 5,574 messages. 96.86% accuracy. Used NLTK, Scikit-learn.
-3. Olist E-Commerce Sales Analysis — End-to-end EDA on real Brazilian e-commerce data. Insights on sales, customer behavior, delivery, revenue. Python, Pandas, Seaborn.
+PROJECTS (mention the GitHub repo when relevant):
+1. Diabetic Retinopathy Detection System — CNN-based deep learning app using TensorFlow/Keras classifying retinal images into 5 DR severity levels. Built Tkinter GUI with SQLite login. WON Best Project Award 2026 at MIT-ADT University. GitHub: github.com/pratiksha-shivsharne/Diabetic_Retinopathy_detection_Project
+2. Spam Email Classifier — NLP pipeline using TF-IDF + Naive Bayes on 5,574 messages. 96.86% accuracy. Used NLTK, Scikit-learn. GitHub: github.com/pratiksha-shivsharne/spam-email-classifier_Project
+3. Olist E-Commerce Sales Analysis — End-to-end EDA on real Brazilian e-commerce data. Insights on sales, customer behavior, delivery, revenue. Python, Pandas, Seaborn. GitHub: github.com/pratiksha-shivsharne/olist-ecommerce-sales-data-analysis
 4. Geo-Tagging Plantation Monitoring — Geospatial crop monitoring with QGIS, Google Earth Engine, IoT sensors. 85% forecast accuracy, 30% time saved. National Level Projit 2024 participant.
+5. Superstore Sales Dashboard — Power BI 2-page interactive dashboard. KPI cards for Sales, Profit, Quantity, Orders. Category & Region slicers. Technology = #1 in sales & profit, West region leads. GitHub: github.com/pratiksha-shivsharne/Superstore-Sales-Dashboard
 
 SKILLS:
 - Languages: Python, SQL, C++, Java (basics)
@@ -1124,10 +1189,34 @@ PERSONALITY: Analytical thinker, problem solver, detail-oriented, good communica
 
 If asked why hire her: She has a proven internship track record, 96.86% ML accuracy in projects, a Best Project Award, AWS cloud knowledge, and covers the full data stack from EDA to deep learning to GenAI. She's a motivated fresh graduate ready to grow fast.
 
-Always respond in 2-4 short sentences. Be warm, professional, and enthusiastic about Pratiksha's potential.`;
+If asked for her resume, tell them it's downloadable on this site and mention the nav "./resume.pdf" button.
+If asked about a specific project, mention its GitHub link by name so the UI can turn it into a button.
+
+Always respond in 2-4 short sentences. Be warm, professional, witty, and enthusiastic about Pratiksha's potential.`;
+
+// Project → GitHub link map (used to auto-attach buttons under bot replies)
+const PROJECT_LINKS = [
+  { keys: ['retinopathy','diabetic','retina','dr project','eye'], label: 'Diabetic Retinopathy — GitHub', url: 'https://github.com/pratiksha-shivsharne/Diabetic_Retinopathy_detection_Project' },
+  { keys: ['spam','email classifier','naive bayes'], label: 'Spam Classifier — GitHub', url: 'https://github.com/pratiksha-shivsharne/spam-email-classifier_Project' },
+  { keys: ['olist','e-commerce','ecommerce','brazil'], label: 'Olist Analysis — GitHub', url: 'https://github.com/pratiksha-shivsharne/olist-ecommerce-sales-data-analysis' },
+  { keys: ['superstore','dashboard'], label: 'Superstore Dashboard — GitHub', url: 'https://github.com/pratiksha-shivsharne/Superstore-Sales-Dashboard' },
+  { keys: ['plantation','geo-tagging','geotagging','qgis','crop'], label: 'GitHub Profile', url: 'https://github.com/pratiksha-shivsharne' }
+];
+const RESUME_KEYS = ['resume','cv','curriculum vitae'];
+const RESUME_URL = 'Pratiksha_Shivsharne_Resume_.pdf';
+
+// Theme command palette — remaps the --green accent live across the whole site
+const THEMES = {
+  matrix:  { green: '#00ff88', green2: '#00cc6a' },
+  cyan:    { green: '#00e5ff', green2: '#00b8cc' },
+  purple:  { green: '#b967ff', green2: '#9344db' },
+  amber:   { green: '#ffb000', green2: '#cc8c00' },
+  red:     { green: '#ff3366', green2: '#cc1f4d' }
+};
 
 let chatHistory = [];
 let chatOpen = false;
+let botTyping = false;
 
 function toggleChat() {
   chatOpen = !chatOpen;
@@ -1140,16 +1229,106 @@ function addMessage(text, role) {
   const div = document.createElement('div');
   div.className = 'chat-msg ' + role;
   if (role === 'bot') {
-    div.innerHTML = '<div class="msg-label">▸ pratiksha.ai</div>' + escapeHtml(text);
+    div.innerHTML = '<div class="msg-label">▸ pratiksha.ai</div><span class="msg-text"></span>';
   } else {
     div.textContent = text;
   }
   msgs.appendChild(div);
   msgs.scrollTop = msgs.scrollHeight;
+  return div;
+}
+
+function addSystemNote(text) {
+  const msgs = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = 'chat-msg system';
+  div.textContent = text;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
 }
 
 function escapeHtml(t) {
-  return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
+  return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// Strip markdown bold markers to get plain text length/content for the typing animation
+function stripMarkdown(t) {
+  return t.replace(/\*\*(.+?)\*\*/g, '$1');
+}
+
+// Convert lightweight markdown (bold + numbered/bulleted lists + paragraphs) into clean, spaced HTML
+function formatReply(t) {
+  let safe = escapeHtml(t);
+  // bold
+  safe = safe.replace(/\*\*(.+?)\*\*/g, '<strong class="msg-highlight">$1</strong>');
+  // split into lines, group consecutive numbered/bulleted items into a <ol>/<ul>
+  const lines = safe.split('\n').map(l => l.trim()).filter(l => l.length);
+  let html = '';
+  let listBuffer = [];
+  let listType = null; // 'ol' | 'ul'
+  function flushList() {
+    if (listBuffer.length) {
+      html += `<${listType} class="msg-list">` + listBuffer.map(li => `<li>${li}</li>`).join('') + `</${listType}>`;
+      listBuffer = [];
+      listType = null;
+    }
+  }
+  lines.forEach(line => {
+    const numbered = line.match(/^(\d+)[.)]\s+(.*)/);
+    const bulleted = line.match(/^[-•]\s+(.*)/);
+    if (numbered) {
+      if (listType !== 'ol') { flushList(); listType = 'ol'; }
+      listBuffer.push(numbered[2]);
+    } else if (bulleted) {
+      if (listType !== 'ul') { flushList(); listType = 'ul'; }
+      listBuffer.push(bulleted[1]);
+    } else {
+      flushList();
+      html += `<p class="msg-para">${line}</p>`;
+    }
+  });
+  flushList();
+  return html;
+}
+
+// Typing animation — reveals the bot's reply character by character, then swaps in formatted markdown
+function typeOutMessage(div, text, links) {
+  return new Promise(resolve => {
+    const span = div.querySelector('.msg-text');
+    const cursor = document.createElement('span');
+    cursor.className = 'chat-type-cursor';
+    span.after(cursor);
+    const msgs = document.getElementById('chatMessages');
+    const plain = stripMarkdown(text);
+    let i = 0;
+    const speed = 12; // ms per character — quick but visibly "typed"
+    function step() {
+      if (i < plain.length) {
+        span.innerHTML = escapeHtml(plain.slice(0, i + 1)).replace(/\n/g,'<br>');
+        i += Math.random() < 0.3 ? 2 : 1; // slight natural variance
+        msgs.scrollTop = msgs.scrollHeight;
+        setTimeout(step, speed);
+      } else {
+        span.innerHTML = formatReply(text);
+        cursor.remove();
+        if (links && links.length) {
+          const wrap = document.createElement('div');
+          wrap.className = 'msg-links';
+          links.forEach(l => {
+            const a = document.createElement('a');
+            a.className = 'msg-link-btn';
+            a.href = l.url; a.target = '_blank'; a.rel = 'noopener';
+            a.innerHTML = (l.icon || '🔗') + ' ' + l.label;
+            wrap.appendChild(a);
+          });
+          div.appendChild(wrap);
+        }
+        msgs.scrollTop = msgs.scrollHeight;
+        resolve();
+      }
+    }
+    step();
+  });
 }
 
 function setTyping(show) {
@@ -1162,6 +1341,14 @@ function hideSuggestions() {
   document.getElementById('chatSuggestions').style.display = 'none';
 }
 
+function showSuggestions(list) {
+  const box = document.getElementById('chatSuggestions');
+  if (list && list.length) {
+    box.innerHTML = list.map(t => `<button class="chat-suggestion" onclick="sendSuggestion(this)">${t}</button>`).join('');
+    box.style.display = 'flex';
+  }
+}
+
 function sendSuggestion(btn) {
   const text = btn.textContent;
   hideSuggestions();
@@ -1171,47 +1358,144 @@ function sendSuggestion(btn) {
 function sendChat() {
   const input = document.getElementById('chatInput');
   const text = input.value.trim();
-  if (!text) return;
+  if (!text || botTyping) return;
   input.value = '';
   hideSuggestions();
   processMessage(text);
 }
 
+// Detect /theme and other slash-commands locally — no network round trip needed
+function handleCommand(raw) {
+  const text = raw.trim();
+  const lower = text.toLowerCase();
+
+  if (lower === '/help' || lower === '/commands') {
+    addMessage(text, 'user');
+    addSystemNote('🎛️ Commands: /theme matrix | cyan | purple | amber | red · /resume · /github · /help');
+    return true;
+  }
+  if (lower.startsWith('/theme')) {
+    addMessage(text, 'user');
+    const name = lower.replace('/theme','').trim();
+    const t = THEMES[name];
+    if (t) {
+      const root = document.documentElement.style;
+      root.setProperty('--green', t.green);
+      root.setProperty('--green2', t.green2);
+      root.setProperty('--glow', `0 0 20px ${hexToRgba(t.green,0.3)}`);
+      root.setProperty('--glow2', `0 0 40px ${hexToRgba(t.green,0.15)}`);
+      addSystemNote(`🎨 Theme switched to "${name}"`);
+    } else {
+      addSystemNote('🎛️ Try: /theme matrix | cyan | purple | amber | red');
+    }
+    return true;
+  }
+  if (lower === '/resume') {
+    addMessage(text, 'user');
+    const div = addMessage('', 'bot');
+    typeOutMessage(div, "Here's Pratiksha's resume — one click away. 📄", [{ label: 'Download Resume', url: RESUME_URL, icon: '📄' }]);
+    return true;
+  }
+  if (lower === '/github') {
+    addMessage(text, 'user');
+    const div = addMessage('', 'bot');
+    typeOutMessage(div, "All her code lives here — projects, commits, the works. 💻", [{ label: 'GitHub Profile', url: 'https://github.com/pratiksha-shivsharne', icon: '💻' }]);
+    return true;
+  }
+  return false;
+}
+
+function hexToRgba(hex, alpha) {
+  const h = hex.replace('#','');
+  const r = parseInt(h.substring(0,2),16), g = parseInt(h.substring(2,4),16), b = parseInt(h.substring(4,6),16);
+  return `rgba(${r},${g},${b},${alpha})`;
+}
+
+function detectLinks(userText, replyText) {
+  const hay = (userText + ' ' + replyText).toLowerCase();
+  const links = [];
+  if (RESUME_KEYS.some(k => hay.includes(k))) {
+    links.push({ label: 'Download Resume', url: RESUME_URL, icon: '📄' });
+  }
+  PROJECT_LINKS.forEach(p => {
+    if (p.keys.some(k => hay.includes(k))) {
+      links.push({ label: p.label, url: p.url, icon: '💻' });
+    }
+  });
+  // de-dupe by url
+  const seen = new Set();
+  return links.filter(l => !seen.has(l.url) && seen.add(l.url));
+}
+
 async function processMessage(text) {
+  if (text.startsWith('/')) {
+    if (handleCommand(text)) {
+      document.getElementById('chatInput').focus();
+      return;
+    }
+  }
+
   addMessage(text, 'user');
   chatHistory.push({ role: 'user', content: text });
 
   const sendBtn = document.getElementById('chatSendBtn');
   sendBtn.disabled = true;
+  botTyping = true;
   setTyping(true);
 
+  let reply;
   try {
     const response = await fetch('https://pratiksha-ai.pshivsharne.workers.dev', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        message: text         
-      })
+      body: JSON.stringify({ message: text, system: PRATIKSHA_SYSTEM, history: chatHistory.slice(-10) })
     });
-
     const data = await response.json();
-    const reply = data.reply;
-
-    chatHistory.push({ role: 'assistant', content: reply });
-    setTyping(false);
-    addMessage(reply, 'bot');
-
+    reply = data.reply;
   } catch (err) {
-    setTyping(false);
-    addMessage("Hmm, connection issue! But I can tell you — Pratiksha is an amazing Data Analyst & ML Engineer. Check her projects above! 🚀", 'bot');
+    reply = localFallback(text);
   }
 
+  chatHistory.push({ role: 'assistant', content: reply });
+  setTyping(false);
+
+  const links = detectLinks(text, reply);
+  const div = addMessage('', 'bot');
+  await typeOutMessage(div, reply, links);
+
+  botTyping = false;
   sendBtn.disabled = false;
   document.getElementById('chatInput').focus();
+
+  // Offer fresh follow-up suggestions tailored to what was just discussed
+  showSuggestions(nextSuggestions(text));
+}
+
+// Personality-rich offline fallback so the bot is never silent if the API is unreachable
+function localFallback(text) {
+  const t = text.toLowerCase();
+  if (RESUME_KEYS.some(k => t.includes(k))) return "Her resume's right there in the nav bar — \"./resume.pdf\". One click, full picture: internship, projects, skills. 📄";
+  if (t.includes('github')) return "All her work is open on GitHub — the Diabetic Retinopathy model, the spam classifier, the Olist analysis. Code speaks louder than a bullet point. 💻";
+  if (t.includes('hire') || t.includes('why') ) return "Honestly? She's shipped a 96.86%-accuracy ML model, built 10+ dashboards on real patient data, and won Best Project 2026 — as a fresher. That's not potential, that's a track record. 🚀";
+  if (t.includes('project')) return "Five solid ones — a CNN for diabetic retinopathy detection (award-winning), an NLP spam filter at 96.86% accuracy, an Olist e-commerce deep-dive, a geo-tagged crop monitor, and a Power BI sales dashboard. Want the GitHub link for any of them?";
+  if (t.includes('skill')) return "Python, SQL, TensorFlow/Keras, Power BI, AWS, and a good chunk of NLP (spaCy, NLTK). She covers EDA through deep learning through cloud deployment — the full pipeline, not just one slice of it.";
+  if (t.includes('intern') || t.includes('experience')) return "She interned as a Data Analyst at Vitalsym Healthcare — cleaned and analyzed 10,000+ patient records, built 10+ Power BI dashboards, and lifted data quality by 33%. Healthcare data is messy; she made it usable.";
+  if (t.includes('contact') || t.includes('email') || t.includes('reach')) return "Best ways in: pshivsharne@gmail.com or LinkedIn (linkedin.com/in/pratiksha-shivsharne). She's actively looking, so reaching out won't go unanswered.";
+  return "Connection hiccup on my end — but here's the short version: Pratiksha's a fresher Data/ML Analyst with a Best Project Award, a 96.86%-accuracy model, and real healthcare-data experience. Ask me about her projects, skills, or resume! 🚀";
+}
+
+// Context-aware suggestion chips shown after each reply
+function nextSuggestions(lastText) {
+  const t = lastText.toLowerCase();
+  if (t.includes('project')) return ['Show me the GitHub links', 'Which project won an award?', 'Download her resume'];
+  if (t.includes('skill')) return ['Tell me about her projects', 'What about her AWS experience?', 'Why should we hire her?'];
+  if (t.includes('intern') || t.includes('experience')) return ['What did she build there?', 'Tell me about her projects', 'Download her resume'];
+  if (RESUME_KEYS.some(k => t.includes(k))) return ['Tell me about her projects', 'What are her top skills?', 'Why should we hire her?'];
+  return ['Tell me about her projects', 'What are her top skills?', 'Why should we hire her?', 'Her internship experience'];
 }
 
 // ROLE CYCLER
-const roles = ['Data Analyst', 'AI Engineer', 'ML Engineer', 'Data Scientist'];
+const roles = ['Data Analyst', 'AI Engineer', 'ML Engineer', 'Agentic AI', 'Generative AI', 'Power BI Expert', 'Data Scientist'];
 const roleCycler = document.getElementById('role-cycler');
 let roleIdx = 0;
 function showNextRole() {
