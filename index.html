@@ -918,10 +918,40 @@ footer .f-right { display: flex; gap: 1.5rem; }
       </div>
     </div>
 
+    <!-- Project 6: NeuroMind AI -->
+    <div class="proj-card reveal reveal-d2">
+      <div class="proj-sidebar">
+        <div class="proj-num">06</div>
+        <div class="proj-lang">lang: <span>Python</span></div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-meta">
+          <span class="proj-cat">// Generative AI · RAG · LLM</span>
+          <span class="proj-acc">Llama 3.3 70B</span>
+          <span class="proj-acc">Deployed on AWS EC2</span>
+        </div>
+        <h3>NeuroMind AI — Chat with Your PDF</h3>
+        <p>Retrieval-Augmented Generation (RAG) chatbot that lets users upload any PDF and ask natural-language questions about it. Extracts and chunks document text, embeds it with HuggingFace sentence-transformers, and indexes it in FAISS/ChromaDB for semantic search. Retrieves the top-3 relevant chunks per query and feeds them to a Groq-hosted Llama 3.3 70B model via LangChain to generate grounded, context-only answers. Streamlit frontend, FastAPI backend, containerized with Docker and deployed live on an AWS EC2 instance.</p>
+        <div class="proj-stack">
+          <span class="proj-tech">Python</span><span class="proj-tech">LangChain</span><span class="proj-tech">Groq</span>
+          <span class="proj-tech">Streamlit</span><span class="proj-tech">FastAPI</span><span class="proj-tech">FAISS</span><span class="proj-tech">ChromaDB</span><span class="proj-tech">HuggingFace</span><span class="proj-tech">Docker</span><span class="proj-tech">AWS EC2</span>
+        </div>
+        <div class="proj-footer">
+          <div class="proj-highlights">
+            <span class="proj-hl">Model: <strong>Llama 3.3 70B</strong></span>
+            <span class="proj-hl">Retrieval: <strong>FAISS Top-3</strong></span>
+            <span class="proj-hl">Chunking: <strong>500 / 100 overlap</strong></span>
+            <span class="proj-hl">Deploy: <strong>Docker on AWS EC2</strong></span>
+          </div>
+          <a href="https://github.com/pratiksha-shivsharne/NeuroMind-AI" class="proj-link-btn" target="_blank">
+            view_repo →
+          </a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
-
-<!-- CERTIFICATIONS -->
 <section id="certifications">
   <div class="sec-header reveal">
     <div class="sec-eyebrow">05 — credentials</div>
@@ -1166,6 +1196,7 @@ PROJECTS (mention the GitHub repo when relevant):
 3. Olist E-Commerce Sales Analysis — End-to-end EDA on real Brazilian e-commerce data. Insights on sales, customer behavior, delivery, revenue. Python, Pandas, Seaborn. GitHub: github.com/pratiksha-shivsharne/olist-ecommerce-sales-data-analysis
 4. Geo-Tagging Plantation Monitoring — Geospatial crop monitoring with QGIS, Google Earth Engine, IoT sensors. 85% forecast accuracy, 30% time saved. National Level Projit 2024 participant.
 5. Superstore Sales Dashboard — Power BI 2-page interactive dashboard. KPI cards for Sales, Profit, Quantity, Orders. Category & Region slicers. Technology = #1 in sales & profit, West region leads. GitHub: github.com/pratiksha-shivsharne/Superstore-Sales-Dashboard
+6. NeuroMind AI — Generative AI RAG chatbot that lets you chat with any PDF. Uses LangChain, Groq-hosted Llama 3.3 70B, HuggingFace embeddings, and FAISS/ChromaDB for retrieval. Streamlit frontend, FastAPI backend, Dockerized and deployed live on AWS EC2. GitHub: github.com/pratiksha-shivsharne/NeuroMind-AI
 
 SKILLS:
 - Languages: Python, SQL, C++, Java (basics)
@@ -1200,7 +1231,8 @@ const PROJECT_LINKS = [
   { keys: ['spam','email classifier','naive bayes'], label: 'Spam Classifier — GitHub', url: 'https://github.com/pratiksha-shivsharne/spam-email-classifier_Project' },
   { keys: ['olist','e-commerce','ecommerce','brazil'], label: 'Olist Analysis — GitHub', url: 'https://github.com/pratiksha-shivsharne/olist-ecommerce-sales-data-analysis' },
   { keys: ['superstore','dashboard'], label: 'Superstore Dashboard — GitHub', url: 'https://github.com/pratiksha-shivsharne/Superstore-Sales-Dashboard' },
-  { keys: ['plantation','geo-tagging','geotagging','qgis','crop'], label: 'GitHub Profile', url: 'https://github.com/pratiksha-shivsharne' }
+  { keys: ['plantation','geo-tagging','geotagging','qgis','crop'], label: 'GitHub Profile', url: 'https://github.com/pratiksha-shivsharne' },
+  { keys: ['neuromind','rag','chat with pdf','chatbot','pdf chat'], label: 'NeuroMind AI — GitHub', url: 'https://github.com/pratiksha-shivsharne/NeuroMind-AI' }
 ];
 const RESUME_KEYS = ['resume','cv','curriculum vitae'];
 const RESUME_URL = 'Pratiksha_Shivsharne_Resume_.pdf';
@@ -1477,7 +1509,7 @@ function localFallback(text) {
   if (RESUME_KEYS.some(k => t.includes(k))) return "Her resume's right there in the nav bar — \"./resume.pdf\". One click, full picture: internship, projects, skills. 📄";
   if (t.includes('github')) return "All her work is open on GitHub — the Diabetic Retinopathy model, the spam classifier, the Olist analysis. Code speaks louder than a bullet point. 💻";
   if (t.includes('hire') || t.includes('why') ) return "Honestly? She's shipped a 96.86%-accuracy ML model, built 10+ dashboards on real patient data, and won Best Project 2026 — as a fresher. That's not potential, that's a track record. 🚀";
-  if (t.includes('project')) return "Five solid ones — a CNN for diabetic retinopathy detection (award-winning), an NLP spam filter at 96.86% accuracy, an Olist e-commerce deep-dive, a geo-tagged crop monitor, and a Power BI sales dashboard. Want the GitHub link for any of them?";
+  if (t.includes('project')) return "Six solid ones — a CNN for diabetic retinopathy detection (award-winning), an NLP spam filter at 96.86% accuracy, an Olist e-commerce deep-dive, a geo-tagged crop monitor, a Power BI sales dashboard, and NeuroMind AI — a RAG chatbot that lets you chat with any PDF, deployed live on AWS EC2. Want the GitHub link for any of them?";
   if (t.includes('skill')) return "Python, SQL, TensorFlow/Keras, Power BI, AWS, and a good chunk of NLP (spaCy, NLTK). She covers EDA through deep learning through cloud deployment — the full pipeline, not just one slice of it.";
   if (t.includes('intern') || t.includes('experience')) return "She interned as a Data Analyst at Vitalsym Healthcare — cleaned and analyzed 10,000+ patient records, built 10+ Power BI dashboards, and lifted data quality by 33%. Healthcare data is messy; she made it usable.";
   if (t.includes('contact') || t.includes('email') || t.includes('reach')) return "Best ways in: pshivsharne@gmail.com or LinkedIn (linkedin.com/in/pratiksha-shivsharne). She's actively looking, so reaching out won't go unanswered.";
